@@ -13,8 +13,22 @@ The system scope currently covers advertisement, campaign and promotion manageme
 
 > **Architecture status:** Working architecture baseline.
 >
-> Items marked **Proposed**, **TBD**, or **To Validate** are not treated as confirmed implementation facts until they are verified against the source repositories, database schema, deployment configuration, integrations, and runtime environment.
+> Items marked **Proposed**, ** To Be Determined (TBD)**, or **To Validate** are not treated as confirmed implementation facts until they are verified against the source repositories, database schema, deployment configuration, integrations, and runtime environment.
 
+### To Be Determined (TBD) vs To Validate
+
+| Term            | Meaning                                                                  | Example                               |
+| --------------- | ------------------------------------------------------------------------ | ------------------------------------- |
+| **TBD**         | The answer/decision has **not been determined yet**.                     | Production database: **TBD**          |
+| **To Validate** | You have a proposed/assumed answer, but it **needs verification**.       | PostgreSQL is used: **To Validate**   |
+| **Proposed**    | An architecture option/decision has been **suggested but not approved**. | API Gateway: **Proposed**             |
+| **Confirmed**   | Evidence supports the information as **currently true**.                 | `ads-promo-api` exists: **Confirmed** |
+| **Approved**    | The architecture decision has been **formally accepted**.                | ADR-001: **Approved**                 |
+
+| Term                       | Meaning                                                                                               | When to Use                                                                                                                              | Example                             |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| **To Be Determined (TBD)** | The information or decision is **not known or decided yet**.                                          | Use when there is **no confirmed answer or decision available yet**.                                                                     | Production database: **TBD**        |
+| **To Validate**            | An assumption or existing information is available, but it **needs to be verified** against evidence. | Use when you **think you know the answer**, but need to check the source repository, configuration, database, or production environment. | PostgreSQL is used: **To Validate** |
 ---
 
 ## 2. Architecture Repository Structure
@@ -60,19 +74,19 @@ enterprise-architecture/
 
 ## 3. TOGAF ADM Mapping
 
-| Repository                     | TOGAF ADM     | Primary purpose                                                         |
-| ------------------------------ | ------------- | ----------------------------------------------------------------------- |
-| `01-architecture-governance`   | Preliminary   | Establish architecture capability, principles, standards and governance |
-| `02-architecture-vision`       | Phase A       | Define vision, scope, stakeholders and business drivers                 |
-| `03-architecture-business`     | Phase B       | Define business capabilities, services and processes                    |
-| `04-architecture-data`         | Phase C       | Define data architecture                                                |
-| `05-architecture-application`  | Phase C       | Define application architecture                                         |
-| `06-architecture-technology`   | Phase D       | Define technology architecture                                          |
-| `07-architecture-solutions`    | Phase E       | Identify solution options and transition architectures                  |
-| `08-migration-roadmap`         | Phase F       | Define migration strategy, roadmap and implementation waves             |
-| `09-implementation-governance` | Phase G       | Govern implementation against approved architecture                     |
-| `11-architecture-change`       | Phase H       | Manage architecture change and trigger new ADM work                     |
-| `10-decisions`                 | Cross-cutting | Manage architecture decisions and requirements                          |
+| Repository                     | TOGAF ADM     | Primary Purpose                                                         | Example                                                                                                                          |
+| ------------------------------ | ------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `01-architecture-governance`   | Preliminary   | Establish architecture capability, principles, standards and governance | Define **Business Alignment**, **API-First**, security principles, architecture standards and review process                     |
+| `02-architecture-vision`       | Phase A       | Define vision, scope, stakeholders and business drivers                 | Define the vision for the **Ads Promotional System** and identify Business Owner, Marketing User, Management and IT stakeholders |
+| `03-architecture-business`     | Phase B       | Define business capabilities, services and processes                    | **Campaign Management → Create Campaign → Approve Campaign → Publish Campaign**                                                  |
+| `04-architecture-data`         | Phase C       | Define data architecture                                                | Define **Customer, Campaign, Advertisement, Promotion and Media** data domains, ownership and data flows                         |
+| `05-architecture-application`  | Phase C       | Define application architecture                                         | Map **`ads-promo-web` → `ads-promo-api` → Database** and define application components and integrations                          |
+| `06-architecture-technology`   | Phase D       | Define technology architecture                                          | Define the runtime, network, database, security, deployment, monitoring and infrastructure architecture                          |
+| `07-architecture-solutions`    | Phase E       | Identify solution options and transition architectures                  | Compare **existing application enhancement vs modularization vs selective service extraction**                                   |
+| `08-migration-roadmap`         | Phase F       | Define migration strategy, roadmap and implementation waves             | **Wave 1:** Security & Observability → **Wave 2:** API/Deployment Improvements → **Wave 3:** Modernization                       |
+| `09-implementation-governance` | Phase G       | Govern implementation against approved architecture                     | Review whether an implementation follows approved **security, API, data and technology architecture**                            |
+| `11-architecture-change`       | Phase H       | Manage architecture change and trigger new ADM work                     | Assess the impact of a **new business requirement, technology change or security requirement** and update the architecture       |
+| `10-decisions`                 | Cross-cutting | Manage architecture decisions and requirements                          | API architecture decision; database decision; deployment decision                                                                |
 
 ### Requirements Management
 

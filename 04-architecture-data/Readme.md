@@ -1,4 +1,17 @@
-# Data Architecture
+# Data Architecture - Data Architecture Principles
+
+| #   | Principle                  | Description                                                                                     |
+| --- | -------------------------- | ----------------------------------------------------------------------------------------------- |
+| 1   | **Data as an Asset**       | Business-critical data should be treated as an enterprise asset.                                |
+| 2   | **Single Source of Truth** | Each critical data domain should have an identified authoritative source.                       |
+| 3   | **Data Ownership**         | Critical data must have an accountable business owner.                                          |
+| 4   | **Data Quality**           | Data should be accurate, complete, consistent, timely, and valid.                               |
+| 5   | **Security by Design**     | Data security must be considered throughout the data lifecycle.                                 |
+| 6   | **Least-Privilege Access** | Users and applications should receive only the data access required for their responsibilities. |
+| 7   | **Data Minimization**      | Collect and retain only data required for legitimate business purposes.                         |
+| 8   | **Traceability**           | Important data changes and movements should be traceable where required.                        |
+| 9   | **Controlled Integration** | Data exchange between systems should use governed interfaces and contracts.                     |
+| 10  | **Lifecycle Management**   | Data should have defined creation, usage, retention, archival, and disposal rules.              |
 
 ## 1. Data Model
 
