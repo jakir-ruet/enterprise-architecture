@@ -63,19 +63,19 @@ enterprise-architecture/
 
 ## 3. TOGAF ADM Mapping
 
-| Repository | TOGAF ADM | Primary purpose |
-|---|---|---|
-| `01-architecture-governance` | Preliminary | Establish architecture capability, principles, standards and governance |
-| `02-architecture-vision` | Phase A | Define vision, scope, stakeholders and business drivers |
-| `03-architecture-business` | Phase B | Define business capabilities, services and processes |
-| `04-architecture-data` | Phase C | Define data architecture |
-| `05-architecture-application` | Phase C | Define application architecture |
-| `06-architecture-technology` | Phase D | Define technology architecture |
-| `07-architecture-solutions` | Phase E | Identify solution options and transition architectures |
-| `08-migration-roadmap` | Phase F | Define migration strategy, roadmap and implementation waves |
-| `09-implementation-governance` | Phase G | Govern implementation against approved architecture |
-| `11-architecture-change` | Phase H | Manage architecture change and trigger new ADM work |
-| `10-decisions` | Cross-cutting | Manage architecture decisions and requirements |
+| Repository                     | TOGAF ADM     | Primary purpose                                                         |
+| ------------------------------ | ------------- | ----------------------------------------------------------------------- |
+| `01-architecture-governance`   | Preliminary   | Establish architecture capability, principles, standards and governance |
+| `02-architecture-vision`       | Phase A       | Define vision, scope, stakeholders and business drivers                 |
+| `03-architecture-business`     | Phase B       | Define business capabilities, services and processes                    |
+| `04-architecture-data`         | Phase C       | Define data architecture                                                |
+| `05-architecture-application`  | Phase C       | Define application architecture                                         |
+| `06-architecture-technology`   | Phase D       | Define technology architecture                                          |
+| `07-architecture-solutions`    | Phase E       | Identify solution options and transition architectures                  |
+| `08-migration-roadmap`         | Phase F       | Define migration strategy, roadmap and implementation waves             |
+| `09-implementation-governance` | Phase G       | Govern implementation against approved architecture                     |
+| `11-architecture-change`       | Phase H       | Manage architecture change and trigger new ADM work                     |
+| `10-decisions`                 | Cross-cutting | Manage architecture decisions and requirements                          |
 
 ### Requirements Management
 
@@ -86,11 +86,11 @@ Requirements Management is **continuous and central to the ADM**, rather than a 
 ## 4. Architecture Lifecycle
 
 ```text
-                         ┌──────────────────────┐
-                         │     Preliminary      │
-                         │ Architecture         │
+                         ┌───────────────────────┐
+                         │     Preliminary       │
+                         │ Architecture          │
                          │ Capability/Governance │
-                         └──────────┬───────────┘
+                         └──────────┬────────────┘
                                     │
                                     ▼
                          ┌──────────────────────┐
@@ -105,11 +105,11 @@ Requirements Management is **continuous and central to the ADM**, rather than a 
                          └──────────┬───────────┘
                                     │
                                     ▼
-                    ┌───────────────────────────────┐
-                    │ C. Information Systems        │
-                    │    ├── Data Architecture      │
+                    ┌────────────────────────────────┐
+                    │ C. Information Systems         │
+                    │    ├── Data Architecture       │
                     │    └── Application Architecture│
-                    └───────────────┬───────────────┘
+                    └───────────────┬────────────────┘
                                     │
                                     ▼
                          ┌──────────────────────┐
@@ -124,7 +124,7 @@ Requirements Management is **continuous and central to the ADM**, rather than a 
                          └──────────┬───────────┘
                                     │
                                     ▼
-                         ┌──────────────────────┐
+                         ┌───────────────────────┐
                          │ F. Migration          │
                          │ Planning              │
                          └──────────┬────────────┘
@@ -160,7 +160,7 @@ Requirements Management is **continuous and central to the ADM**, rather than a 
             ads-promo-web                 ads-promo-api
              Frontend/UI                    Backend/API
                    │                             │
-                   └──────────── REST ──────────┘
+                   └──────────── REST ───────────┘
                                   │
                                   ▼
                               Database
@@ -180,30 +180,32 @@ Requirements Management is **continuous and central to the ADM**, rather than a 
 
 The working architecture baseline follows these principles:
 
-1. **Business-driven architecture** — technology decisions should support measurable business outcomes.
-2. **API-first integration** — application capabilities should be exposed through well-defined interfaces where appropriate.
-3. **Security by design** — authentication, authorization, encryption, secrets management and auditability are architectural concerns.
-4. **Separation of concerns** — presentation, business logic, data access and integration responsibilities should remain appropriately separated.
-5. **Observability by design** — critical services should provide logs, metrics and operational visibility.
-6. **Automation first** — repeatable build, test, deployment and infrastructure processes should be automated.
-7. **Reuse before duplication** — existing approved capabilities should be reused where practical.
-8. **Data ownership and accountability** — critical data should have identified ownership and stewardship.
-9. **Resilience proportional to business criticality** — availability, backup and recovery controls should reflect business requirements.
-10. **Architecture decisions are documented** — significant decisions should have traceable ADRs.
+| #   | Architecture Principle                              | Description                                                                                                        |
+| --- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| 1   | **Business-driven architecture**                    | Technology decisions should support measurable business outcomes.                                                  |
+| 2   | **API-first integration**                           | Application capabilities should be exposed through well-defined interfaces where appropriate.                      |
+| 3   | **Security by design**                              | Authentication, authorization, encryption, secrets management, and auditability are architectural concerns.        |
+| 4   | **Separation of concerns**                          | Presentation, business logic, data access, and integration responsibilities should remain appropriately separated. |
+| 5   | **Observability by design**                         | Critical services should provide logs, metrics, and operational visibility.                                        |
+| 6   | **Automation first**                                | Repeatable build, test, deployment, and infrastructure processes should be automated.                              |
+| 7   | **Reuse before duplication**                        | Existing approved capabilities should be reused where practical.                                                   |
+| 8   | **Data ownership and accountability**               | Critical data should have identified ownership and stewardship.                                                    |
+| 9   | **Resilience proportional to business criticality** | Availability, backup, and recovery controls should reflect business requirements.                                  |
+| 10  | **Architecture decisions are documented**           | Significant decisions should have traceable Architecture Decision Records (ADRs).                                  |
 
 ---
 
 ## 7. Source of Truth
 
-| Concern | Source of truth |
-|---|---|
-| Implementation behavior | Application repositories |
+| Concern                 | Source of truth                                                |
+| ----------------------- | -------------------------------------------------------------- |
+| Implementation behavior | Application repositories                                       |
 | Database implementation | Database schema/migrations and approved database documentation |
-| Deployment behavior | Deployment manifests, IaC and environment configuration |
-| Runtime behavior | Approved production/runtime evidence |
-| Architecture decisions | This architecture repository |
-| Approved standards | Architecture governance documentation |
-| Requirements | Requirements baseline/backlog and traceability records |
+| Deployment behavior     | Deployment manifests, IaC and environment configuration        |
+| Runtime behavior        | Approved production/runtime evidence                           |
+| Architecture decisions  | This architecture repository                                   |
+| Approved standards      | Architecture governance documentation                          |
+| Requirements            | Requirements baseline/backlog and traceability records         |
 
 This repository must not silently replace implementation evidence.
 
@@ -211,14 +213,14 @@ This repository must not silently replace implementation evidence.
 
 ## 8. Status Vocabulary
 
-| Status | Meaning |
-|---|---|
-| **Confirmed** | Supported by available implementation/context evidence |
-| **Proposed** | Target architecture recommendation requiring review/approval |
-| **TBD** | Required information is not currently available |
+| Status          | Meaning                                                                   |
+| --------------- | ------------------------------------------------------------------------- |
+| **Confirmed**   | Supported by available implementation/context evidence                    |
+| **Proposed**    | Target architecture recommendation requiring review/approval              |
+| **TBD**         | Required information is not currently available                           |
 | **To Validate** | A hypothesis that must be checked against implementation/runtime evidence |
-| **Deprecated** | Previously accepted but no longer valid |
-| **Approved** | Reviewed and formally accepted architecture decision |
+| **Deprecated**  | Previously accepted but no longer valid                                   |
+| **Approved**    | Reviewed and formally accepted architecture decision                      |
 
 ---
 
