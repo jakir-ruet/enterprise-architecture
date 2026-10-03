@@ -23,45 +23,31 @@ The system scope currently covers advertisement, campaign and promotion manageme
 enterprise-architecture/
 │
 ├── 01-architecture-governance/
-│   ├── governance.md
-│   ├── principles.md
-│   └── standards.md
+│   └── Readme.md
 │
 ├── 02-architecture-vision/
-│   ├── architecture-vision.md
-│   └── stakeholders.md
+│   └── Readme.md
 │
 ├── 03-architecture-business/
-│   ├── business-services.md
-│   ├── capabilities.md
-│   └── processes.md
+│   └── Readme.md
 │
 ├── 04-architecture-data/
-│   ├── data-flow.md
-│   ├── data-model.md
-│   └── data-ownership.md
+│   └── Readme.md
 │
 ├── 05-architecture-application/
-│   ├── application-landscape.md
-│   ├── components.md
-│   └── integration.md
+│   └── Readme.md
 │
 ├── 06-architecture-technology/
-│   ├── deployment.md
-│   ├── infrastructure.md
-│   └── security.md
+│   └── Readme.md
 │
 ├── 07-architecture-solutions/
-│   ├── solution-options.md
-│   └── transition-architecture.md
+│   └── Readme.md
 │
 ├── 08-migration-roadmap/
-│   ├── migration-waves.md
-│   └── roadmap.md
+│   └── Readme.md
 │
 ├── 09-implementation-governance/
-│   ├── architecture-review.md
-│   └── exceptions.md
+│   └── Readme.md
 │
 ├── 10-decisions/
 │   ├── ADR-001.md
@@ -70,30 +56,26 @@ enterprise-architecture/
 │   └── requirements-management.md
 │
 ├── 11-architecture-change/
-│   ├── change-management.md
-│   ├── change-request.md
-│   └── impact-assessment.md
+│   └── Readme.md
 │
 └── README.md
 ```
 
----
-
 ## 3. TOGAF ADM Mapping
 
-| Your directory                 | TOGAF ADM     | Purpose                                        |
-| ------------------------------ | ------------- | ---------------------------------------------- |
-| `01-architecture-governance`   | Preliminary   | Architecture principles, standards, governance |
-| `02-architecture-vision`       | Phase A       | Vision, scope, stakeholders, business drivers  |
-| `03-architecture-business`     | Phase B       | Business architecture                          |
-| `04-architecture-data`         | Phase C       | Data architecture                              |
-| `05-architecture-application`  | Phase C       | Application architecture                       |
-| `06-architecture-technology`   | Phase D       | Technology architecture                        |
-| `07-architecture-solutions`    | Phase E       | Opportunities & Solutions                      |
-| `08-migration-roadmap`         | Phase F       | Migration Planning                             |
-| `09-implementation-governance` | Phase G       | Implementation Governance                      |
-| `10-decisions`                 | Cross-cutting | Architecture Decision Records                  |
-| —                              | Phase H       | Architecture Change Management                 |
+| Repository | TOGAF ADM | Primary purpose |
+|---|---|---|
+| `01-architecture-governance` | Preliminary | Establish architecture capability, principles, standards and governance |
+| `02-architecture-vision` | Phase A | Define vision, scope, stakeholders and business drivers |
+| `03-architecture-business` | Phase B | Define business capabilities, services and processes |
+| `04-architecture-data` | Phase C | Define data architecture |
+| `05-architecture-application` | Phase C | Define application architecture |
+| `06-architecture-technology` | Phase D | Define technology architecture |
+| `07-architecture-solutions` | Phase E | Identify solution options and transition architectures |
+| `08-migration-roadmap` | Phase F | Define migration strategy, roadmap and implementation waves |
+| `09-implementation-governance` | Phase G | Govern implementation against approved architecture |
+| `11-architecture-change` | Phase H | Manage architecture change and trigger new ADM work |
+| `10-decisions` | Cross-cutting | Manage architecture decisions and requirements |
 
 ### Requirements Management
 
