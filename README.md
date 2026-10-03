@@ -50,9 +50,6 @@ enterprise-architecture/
 │   └── Readme.md
 │
 ├── 10-decisions/
-│   ├── ADR-001.md
-│   ├── ADR-002.md
-│   ├── ADR-003.md
 │   └── requirements-management.md
 │
 ├── 11-architecture-change/
