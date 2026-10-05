@@ -1,0 +1,88 @@
+# ============================================================
+# VS Code
+# ============================================================
+.vscode/
+
+# ============================================================
+# IntelliJ IDEA
+# ============================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ============================================================
+# NetBeans
+# ============================================================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ============================================================
+# Gradle / Build
+# ============================================================
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ============================================================
+# Maven & Java
+# ============================================================
+target/
+*.class
+
+# Maven wrapper JAR is normally generated/tracked only if
+# you intentionally use the Maven Wrapper.
+# Do NOT ignore it if you want ./mvnw to work from Git.
+# .mvn/wrapper/maven-wrapper.jar
+
+# ============================================================
+# macOS
+# ============================================================
+.DS_Store
+
+# ============================================================
+# Spring Tool Suite / Eclipse
+# ============================================================
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# ============================================================
+# Environment / Secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# Production runtime artifacts
+# ============================================================
+
+# Application JAR
+deployment/vm/adspromo-app/app/*.jar
+
+# Backups
+deployment/vm/ads-promo-api/backup/*
+
+# Runtime logs
+deployment/vm/ads-promo-api/logs/*
+
+# External runtime configuration
+deployment/vm/adspromo-app/config/*.yml
+deployment/vm/adspromo-app/config/*.yaml
+
+# ============================================================
+# Keep deployment directory placeholders
+# ============================================================
+
+!deployment/vm/ads-promo-api/app/.gitkeep
+!deployment/vm/ads-promo-api/backup/.gitkeep
+!deployment/vm/ads-promo-api/config/.gitkeep
+!deployment/vm/ads-promo-api/logs/.gitkeep

@@ -1,0 +1,151 @@
+# Auto-detect text files and normalize to LF in repo
+* text=auto
+
+# ------------------------------------------------
+# SHELL SCRIPTS
+# ------------------------------------------------
+*.sh        text eol=lf
+*.bash      text eol=lf
+*.zsh       text eol=lf
+*.fish      text eol=lf
+*.profile   text eol=lf
+*.env       text eol=lf
+*.env.*     text eol=lf
+
+# ------------------------------------------------
+# WINDOWS SCRIPTS
+# ------------------------------------------------
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+*.psm1      text eol=crlf
+*.psd1      text eol=crlf
+
+# ------------------------------------------------
+# PROGRAMMING LANGUAGES (always LF for consistency)
+# ------------------------------------------------
+*.py        text eol=lf diff=python
+*.js        text eol=lf
+*.ts        text eol=lf
+*.jsx       text eol=lf
+*.tsx       text eol=lf
+*.json      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.toml      text eol=lf
+*.xml       text eol=lf
+*.html      text eol=lf
+*.css       text eol=lf
+*.scss      text eol=lf
+*.sql       text eol=lf
+*.rb        text eol=lf diff=ruby
+*.go        text eol=lf
+*.rs        text eol=lf
+*.php       text eol=lf
+*.lua       text eol=lf
+*.kt        text eol=lf
+
+# ------------------------------------------------
+# C/C++ family
+# ------------------------------------------------
+*.c         text eol=lf
+*.cpp       text eol=lf
+*.h         text eol=lf
+*.hpp       text eol=lf
+*.cc        text eol=lf
+*.hh        text eol=lf
+
+# ------------------------------------------------
+# JAVA & JVM
+# ------------------------------------------------
+*.java      text eol=lf
+*.groovy    text eol=lf
+*.scala     text eol=lf
+*.clj       text eol=lf
+
+# ------------------------------------------------
+# MARKUP & DOCS
+# ------------------------------------------------
+*.md        text eol=lf diff=markdown
+*.markdown  text eol=lf
+*.rst       text eol=lf
+*.adoc      text eol=lf
+*.txt       text eol=lf
+*.log       text eol=lf
+
+# ------------------------------------------------
+# CONFIG FILES
+# ------------------------------------------------
+*.conf      text eol=lf
+*.cfg       text eol=lf
+*.ini       text eol=lf
+*.properties text eol=lf
+*.gitconfig text eol=lf
+.editorconfig text eol=lf
+.prettierrc text eol=lf
+.eslintrc.* text eol=lf
+
+# ------------------------------------------------
+# DOCKER
+# ------------------------------------------------
+Dockerfile  text eol=lf
+*.dockerfile text eol=lf
+.dockerignore text eol=lf
+
+# ------------------------------------------------
+# BINARY FILES (never modify)
+# ------------------------------------------------
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.svg       text
+*.pdf       binary
+*.zip       binary
+*.tar       binary
+*.gz        binary
+*.bz2       binary
+*.7z        binary
+*.rar       binary
+*.exe       binary
+*.dll       binary
+*.so        binary
+*.dylib     binary
+*.o         binary
+*.pyc       binary
+*.class     binary
+*.jar       binary
+*.war       binary
+*.ear       binary
+*.db        binary
+*.sqlite    binary
+*.xlsx      binary
+*.docx      binary
+*.pptx      binary
+*.vsix      binary
+
+# ------------------------------------------------
+# LOCK FILES (prevent merge conflicts)
+# ------------------------------------------------
+package-lock.json text eol=lf -merge
+yarn.lock         text eol=lf -merge
+pnpm-lock.yaml    text eol=lf -merge
+composer.lock     text eol=lf -merge
+Gemfile.lock      text eol=lf -merge
+Cargo.lock        text eol=lf -merge
+poetry.lock       text eol=lf -merge
+requirements.txt  text eol=lf
+
+# ------------------------------------------------
+# OS-SPECIFIC
+# ------------------------------------------------
+.DS_Store   binary
+Thumbs.db   binary
+desktop.ini text eol=crlf
+
+# ------------------------------------------------
+# SPECIAL HANDLING
+# ------------------------------------------------
+# Ensure shebang scripts always use LF
+# (these are already caught by the script extensions above)

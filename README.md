@@ -157,6 +157,10 @@ Requirements Management is **continuous and central to the ADM**, rather than a 
               Requirements Management operates across all phases.
 ```
 
+### TOGAF Architecture Development Method (ADM)
+
+![TOGAF Architecture Development Method (ADM)](/img/TOGAF-ADM-Architecture-Cycle.png)
+
 ---
 
 ## 5. Application Boundary
