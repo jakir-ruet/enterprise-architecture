@@ -520,7 +520,288 @@ For your Enterprise Digital Employee Platform, we could define
 
 ## 5. Phase A: Architecture Vision
 
+A succinct description of the Target Architecture that describes its business value and the changes to the enterprise that will result from its successful deployment. It serves as an aspirational vision and a boundary for detailed architecture development. Key Deliverables in Phase A
+
+1. Statement of Architecture Work
+2. Business Transformation Readiness Assessment
+3. Architecture Vision & Definition Document
+
+The Statement of Architecture Work defines what architecture work is going to be performed, why it is being performed, and what the architecture effort will cover.
+
+| Aspect                  | Architecture Vision                             |
+| ----------------------- | ----------------------------------------------- |
+| **Level**               | High-level                                      |
+| **Focus**               | Future / Target Architecture                    |
+| **Purpose**             | Communicate the desired architectural direction |
+| **Describes**           | Capabilities and business value                 |
+| **Includes**            | Target Architecture value propositions and KPIs |
+| **Considers**           | Business transformation risks and mitigation    |
+| **Stakeholder purpose** | Create a common understanding and support       |
+| **ADM Phase**           | **Phase A — Architecture Vision**               |
+
+Don't confuse it with the Statement of Architecture Work
+
+| Statement of Architecture Work         | Architecture Vision                            |
+| -------------------------------------- | ---------------------------------------------- |
+| Defines **the architecture work**      | Defines **the architectural direction**        |
+| Scope, approach, deliverables          | Capabilities, value, Target Architecture       |
+| **What architecture work will we do?** | **What will the future architecture achieve?** |
+
+Suppose we are implementing your Digital Employee Platform.
+
+| Readiness Factor   | Current Situation                  | Readiness | Risk   | Mitigation                     |
+| ------------------ | ---------------------------------- | --------- | ------ | ------------------------------ |
+| Leadership support | Strong                             | High      | Low    | Continue executive sponsorship |
+| Employee adoption  | Employees used to legacy systems   | Medium    | Medium | Training and communication     |
+| Technical skills   | Limited cloud/microservices skills | Medium    | High   | Training + hiring              |
+| Data quality       | Duplicate employee records         | Low       | High   | Data cleansing/migration       |
+| Change culture     | Moderate resistance                | Medium    | High   | Change-management program      |
+
+> Exam memory
+
+- Architecture Vision = `high-level capabilities + business value + desired direction.`
+- And for Phase A, remember: `Vision → Value/KPIs → Risks/Mitigation → Statement of Architecture Work → Approval.`
+
 ## 6. Phase B: Business Architecture
+
+The focus is to understand the Baseline Business Architecture, define the Target Business Architecture, and determine what must change to move from the current state to the desired state. It relates business elements to business goals and elements of other domains.
+
+**Purpose** Develop the Target Business Architecture that supports the Architecture Vision and addresses the business drivers and objectives.
+
+```bash
+Baseline Business Architecture
+          ↓
+       Analysis
+          ↓
+Target Business Architecture
+          ↓
+      Gap Analysis
+```
+
+Baseline vs Target Business Architecture
+
+|          | Baseline                        | Target                           |
+| -------- | ------------------------------- | -------------------------------- |
+| Meaning  | Current business state          | Desired future business state    |
+| Focus    | How the business works today    | How the business should work     |
+| Purpose  | Establish reference point       | Define future direction          |
+| Example  | Manual employee onboarding      | Digital employee onboarding      |
+| Used for | Understanding current situation | Defining required transformation |
+
+Major Activities
+
+| Step  | Activity                                          | Purpose                                                              |
+| ----- | ------------------------------------------------- | -------------------------------------------------------------------- |
+| **1** | Select reference models, viewpoints and tools     | Establish how the Business Architecture will be represented          |
+| **2** | Develop Baseline Business Architecture            | Document the current business state                                  |
+| **3** | Develop Target Business Architecture              | Define the desired future business state                             |
+| **4** | Perform Gap Analysis                              | Identify differences between Baseline and Target                     |
+| **5** | Define candidate roadmap components               | Identify major changes required                                      |
+| **6** | Resolve impacts across the Architecture Landscape | Ensure business changes are consistent with other architecture areas |
+
+Business Architecture Components
+
+| Component               | Example                     |
+| ----------------------- | --------------------------- |
+| **Business Capability** | Employee Onboarding         |
+| **Business Process**    | Onboard Employee            |
+| **Business Function**   | HR Management               |
+| **Organization**        | HR Department               |
+| **Business Role**       | HR Officer                  |
+| **Value Stream**        | Employee Lifecycle          |
+| **Business Service**    | Employee Onboarding Service |
+
+| Area               | Baseline         | Target               | Gap                     |
+| ------------------ | ---------------- | -------------------- | ----------------------- |
+| Onboarding         | Manual           | Automated            | Workflow capability     |
+| Employee data      | Multiple sources | Centralized          | Data integration        |
+| Account creation   | Manual           | Automated            | Provisioning capability |
+| Communication      | Email            | Portal/notifications | Digital service         |
+| Process monitoring | Limited          | Real-time            | Operational visibility  |
+
+### Gap Analysis
+
+A gap is the shortfall between the Baseline Architecture and the Target Architecture.
+
+```bash
+BASELINE                         TARGET
+Current State                    Future State
+     │                                │
+     └────────── Compare ─────────────┘
+                     │
+                     ▼
+                   GAPS
+                     │
+                     ▼
+             What must change?
+```
+
+Suppose an organization currently performs employee onboarding manually.
+
+**Baseline:**
+
+- HR creates employee records manually
+- Paper-based document collection
+- Email-based approval
+- No centralized onboarding status
+- Manual account provisioning
+
+**Target:**
+
+- Digital onboarding portal
+- Online document submission
+- Automated approval workflow
+- Centralized onboarding tracking
+- Automated account provisioning
+
+> The gaps are the differences between these two states.
+
+| Area                | Baseline    | Target            | Gap                                       |
+| ------------------- | ----------- | ----------------- | ----------------------------------------- |
+| Employee onboarding | Manual      | Digital           | Digital onboarding capability             |
+| Documents           | Paper/email | Online repository | Document management capability            |
+| Approval            | Email       | Workflow          | Workflow automation                       |
+| Status tracking     | Manual      | Centralized       | Onboarding tracking capability            |
+| Account creation    | Manual      | Automated         | Identity/account provisioning integration |
+
+> So the relationship is: `Baseline → Target → Gap Analysis → Change Requirements → Roadmap Components`
+
+Baseline
+
+```bash
+Employee
+   │
+   ▼
+HR Email
+   │
+   ▼
+Manual HR Processing
+   │
+   ├── Documents
+   ├── Approval
+   ├── Employee Record
+   └── Account Creation
+```
+
+Target
+
+```bash
+Employee
+   │
+   ▼
+Digital Employee Portal
+   │
+   ▼
+Workflow / Integration Layer
+   │
+   ├── HR Management
+   ├── Document Management
+   ├── Approval
+   ├── Identity Management
+   └── Employee Notification
+```
+
+Gap Register
+
+| Gap ID  | Baseline                | Target                 | Gap / Required Change            |
+| ------- | ----------------------- | ---------------------- | -------------------------------- |
+| GAP-001 | Email-based onboarding  | Digital portal         | Employee self-service capability |
+| GAP-002 | Manual approval         | Workflow               | Approval automation              |
+| GAP-003 | Paper/email documents   | Digital documents      | Document management              |
+| GAP-004 | Manual account creation | Automated provisioning | IAM integration                  |
+| GAP-005 | No centralized tracking | Real-time status       | Onboarding tracking              |
+
+Overall Approach
+
+| Step  | Activity                                          | Main Question                                                           |
+| ----- | ------------------------------------------------- | ----------------------------------------------------------------------- |
+| **1** | Select reference models, viewpoints and tools     | How will we describe the Business Architecture?                         |
+| **2** | Develop Baseline Business Architecture            | What does the business look like today?                                 |
+| **3** | Develop Target Business Architecture              | What should the business look like in the future?                       |
+| **4** | Perform Gap Analysis                              | What must change?                                                       |
+| **5** | Define candidate roadmap components               | What changes/projects may be required?                                  |
+| **6** | Resolve impacts across the Architecture Landscape | What impact does the Business Architecture have on other architectures? |
+
+Step 1 — Select Reference Models, Viewpoints and Tools
+
+Before creating the architecture, the architect determines how the business will be represented and analyzed. This includes selecting:
+
+- Reference models
+- Viewpoints
+- Architecture tools
+
+Why? Different stakeholders need different representations.
+
+| Stakeholder          | Useful viewpoint                                 |
+| -------------------- | ------------------------------------------------ |
+| CEO                  | Business capabilities / value                    |
+| HR Director          | HR processes and organizational responsibilities |
+| Process Owner        | Business process                                 |
+| Enterprise Architect | Cross-domain architecture                        |
+| IT Manager           | Business-to-application relationship             |
+
+> The important point is that the architecture representation should support stakeholder concerns.
+
+Step 2 — Develop Baseline Business Architecture
+
+Now document the current business state. You might capture:
+
+- Business capabilities
+- Business processes
+- Business functions
+- Organization structure
+- Business roles
+- Business services
+- Value streams
+
+```bash
+Employee
+   ↓
+Email HR
+   ↓
+HR manually verifies documents
+   ↓
+Manager approval
+   ↓
+HR creates employee record
+   ↓
+IT manually creates accounts
+```
+
+Develop Target Business Architecture
+
+Next define the future business state required to achieve the Architecture Vision. For your Digital Employee Platform.
+
+```bash
+Employee
+   ↓
+Digital Employee Portal
+   ↓
+Automated Workflow
+   ├── Document Verification
+   ├── Manager Approval
+   ├── Employee Registration
+   └── IT/IAM Provisioning
+```
+
+Step 4 — Perform Gap Analysis
+
+```bash
+Baseline Business Architecture
+              │
+              ▼
+        GAP ANALYSIS
+              ▲
+              │
+Target Business Architecture
+```
+
+| Baseline                | Target                 | Gap                           |
+| ----------------------- | ---------------------- | ----------------------------- |
+| Manual onboarding       | Digital onboarding     | Digital onboarding capability |
+| Email approval          | Workflow approval      | Workflow capability           |
+| Manual account creation | Automated provisioning | IAM integration capability    |
+| Paper documents         | Digital documents      | Digital document capability   |
 
 ## 7. Phase C: Information Systems Architecture
 
@@ -547,254 +828,3 @@ For your Enterprise Digital Employee Platform, we could define
 ## 18. Practice Test
 
 ## 19. Wrap-up
-
----
-
-## 1. Purpose
-
-This repository documents the Enterprise Architecture (EA) of the Ads Promotional System using a practical **TOGAF Architecture Development Method (ADM)**-aligned structure.
-
-### Implementation applications
-
-- **Backend:** `ads-promo-api`
-- **Frontend:** `ads-promo-web`
-
-The system scope currently covers advertisement, campaign and promotion management, customer management, reporting, audit, user/role/permission management, and customer messaging capabilities including WhatsApp-related functionality.
-
-> **Architecture status:** Working architecture baseline.
->
-> Items marked **Proposed**, ** To Be Determined (TBD)**, or **To Validate** are not treated as confirmed implementation facts until they are verified against the source repositories, database schema, deployment configuration, integrations, and runtime environment.
-
-### To Be Determined (TBD) vs To Validate
-
-| Term            | Meaning                                                                  | Example                               |
-| --------------- | ------------------------------------------------------------------------ | ------------------------------------- |
-| **TBD**         | The answer/decision has **not been determined yet**.                     | Production database: **TBD**          |
-| **To Validate** | You have a proposed/assumed answer, but it **needs verification**.       | PostgreSQL is used: **To Validate**   |
-| **Proposed**    | An architecture option/decision has been **suggested but not approved**. | API Gateway: **Proposed**             |
-| **Confirmed**   | Evidence supports the information as **currently true**.                 | `ads-promo-api` exists: **Confirmed** |
-| **Approved**    | The architecture decision has been **formally accepted**.                | ADR-001: **Approved**                 |
-
-| Term                       | Meaning                                                                                               | When to Use                                                                                                                              | Example                             |
-| -------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| **To Be Determined (TBD)** | The information or decision is **not known or decided yet**.                                          | Use when there is **no confirmed answer or decision available yet**.                                                                     | Production database: **TBD**        |
-| **To Validate**            | An assumption or existing information is available, but it **needs to be verified** against evidence. | Use when you **think you know the answer**, but need to check the source repository, configuration, database, or production environment. | PostgreSQL is used: **To Validate** |
----
-
-## 2. Architecture Repository Structure
-
-```text
-enterprise-architecture/
-│
-├── 01-architecture-governance/
-│   └── Readme.md
-│
-├── 02-architecture-vision/
-│   └── Readme.md
-│
-├── 03-architecture-business/
-│   └── Readme.md
-│
-├── 04-architecture-data/
-│   └── Readme.md
-│
-├── 05-architecture-application/
-│   └── Readme.md
-│
-├── 06-architecture-technology/
-│   └── Readme.md
-│
-├── 07-architecture-solutions/
-│   └── Readme.md
-│
-├── 08-migration-roadmap/
-│   └── Readme.md
-│
-├── 09-implementation-governance/
-│   └── Readme.md
-│
-├── 10-decisions/
-│   └── requirements-management.md
-│
-├── 11-architecture-change/
-│   └── Readme.md
-│
-└── README.md
-```
-
-## 3. TOGAF ADM Mapping
-
-| Repository                     | TOGAF ADM     | Primary Purpose                                                         | Example                                                                                                                          |
-| ------------------------------ | ------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `01-architecture-governance`   | Preliminary   | Establish architecture capability, principles, standards and governance | Define **Business Alignment**, **API-First**, security principles, architecture standards and review process                     |
-| `02-architecture-vision`       | Phase A       | Define vision, scope, stakeholders and business drivers                 | Define the vision for the **Ads Promotional System** and identify Business Owner, Marketing User, Management and IT stakeholders |
-| `03-architecture-business`     | Phase B       | Define business capabilities, services and processes                    | **Campaign Management → Create Campaign → Approve Campaign → Publish Campaign**                                                  |
-| `04-architecture-data`         | Phase C       | Define data architecture                                                | Define **Customer, Campaign, Advertisement, Promotion and Media** data domains, ownership and data flows                         |
-| `05-architecture-application`  | Phase C       | Define application architecture                                         | Map **`ads-promo-web` → `ads-promo-api` → Database** and define application components and integrations                          |
-| `06-architecture-technology`   | Phase D       | Define technology architecture                                          | Define the runtime, network, database, security, deployment, monitoring and infrastructure architecture                          |
-| `07-architecture-solutions`    | Phase E       | Identify solution options and transition architectures                  | Compare **existing application enhancement vs modularization vs selective service extraction**                                   |
-| `08-migration-roadmap`         | Phase F       | Define migration strategy, roadmap and implementation waves             | **Wave 1:** Security & Observability → **Wave 2:** API/Deployment Improvements → **Wave 3:** Modernization                       |
-| `09-implementation-governance` | Phase G       | Govern implementation against approved architecture                     | Review whether an implementation follows approved **security, API, data and technology architecture**                            |
-| `11-architecture-change`       | Phase H       | Manage architecture change and trigger new ADM work                     | Assess the impact of a **new business requirement, technology change or security requirement** and update the architecture       |
-| `10-decisions`                 | Cross-cutting | Manage architecture decisions and requirements                          | API architecture decision; database decision; deployment decision                                                                |
-
-### Requirements Management
-
-Requirements Management is **continuous and central to the ADM**, rather than a single sequential phase. Requirements can enter, change, or be traced through every ADM phase.
-
----
-
-## 4. Architecture Lifecycle
-
-```text
-                         ┌───────────────────────┐
-                         │     Preliminary       │
-                         │ Architecture          │
-                         │ Capability/Governance │
-                         └──────────┬────────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ A. Architecture      │
-                         │ Vision               │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ B. Business          │
-                         │ Architecture         │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                    ┌────────────────────────────────┐
-                    │ C. Information Systems         │
-                    │    ├── Data Architecture       │
-                    │    └── Application Architecture│
-                    └───────────────┬────────────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ D. Technology        │
-                         │ Architecture         │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ E. Opportunities &   │
-                         │ Solutions            │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌───────────────────────┐
-                         │ F. Migration          │
-                         │ Planning              │
-                         └──────────┬────────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ G. Implementation    │
-                         │ Governance           │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ H. Architecture      │
-                         │ Change Management    │
-                         └──────────┬───────────┘
-                                    │
-                                    └──────► New / Updated ADM Cycle
-
-              Requirements Management operates across all phases.
-```
-
-### TOGAF Architecture Development Method (ADM)
-
-![TOGAF Architecture Development Method (ADM)](/img/TOGAF-ADM-Architecture-Cycle.png)
-
----
-
-## 5. Application Boundary
-
-```text
-                         Ads Promotional System
-
-                                  │
-                   ┌──────────────┴──────────────┐
-                   │                             │
-                   ▼                             ▼
-            ads-promo-web                 ads-promo-api
-             Frontend/UI                    Backend/API
-                   │                             │
-                   └──────────── REST ───────────┘
-                                  │
-                                  ▼
-                              Database
-                                  │
-                 ┌────────────────┼────────────────┐
-                 │                │                │
-                 ▼                ▼                ▼
-              ERP/CRM        WhatsApp          Reporting/BI
-             /External       /Messaging          /Analytics
-```
-
-> External integrations, database technology, deployment topology, and runtime components must be validated against the implementation repositories and environment before being treated as confirmed architecture.
-
----
-
-## 6. Architecture Principles
-
-The working architecture baseline follows these principles:
-
-| #   | Architecture Principle                              | Description                                                                                                        |
-| --- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| 1   | **Business-driven architecture**                    | Technology decisions should support measurable business outcomes.                                                  |
-| 2   | **API-first integration**                           | Application capabilities should be exposed through well-defined interfaces where appropriate.                      |
-| 3   | **Security by design**                              | Authentication, authorization, encryption, secrets management, and auditability are architectural concerns.        |
-| 4   | **Separation of concerns**                          | Presentation, business logic, data access, and integration responsibilities should remain appropriately separated. |
-| 5   | **Observability by design**                         | Critical services should provide logs, metrics, and operational visibility.                                        |
-| 6   | **Automation first**                                | Repeatable build, test, deployment, and infrastructure processes should be automated.                              |
-| 7   | **Reuse before duplication**                        | Existing approved capabilities should be reused where practical.                                                   |
-| 8   | **Data ownership and accountability**               | Critical data should have identified ownership and stewardship.                                                    |
-| 9   | **Resilience proportional to business criticality** | Availability, backup, and recovery controls should reflect business requirements.                                  |
-| 10  | **Architecture decisions are documented**           | Significant decisions should have traceable Architecture Decision Records (ADRs).                                  |
-
----
-
-## 7. Source of Truth
-
-| Concern                 | Source of truth                                                |
-| ----------------------- | -------------------------------------------------------------- |
-| Implementation behavior | Application repositories                                       |
-| Database implementation | Database schema/migrations and approved database documentation |
-| Deployment behavior     | Deployment manifests, IaC and environment configuration        |
-| Runtime behavior        | Approved production/runtime evidence                           |
-| Architecture decisions  | This architecture repository                                   |
-| Approved standards      | Architecture governance documentation                          |
-| Requirements            | Requirements baseline/backlog and traceability records         |
-
-This repository must not silently replace implementation evidence.
-
----
-
-## 8. Status Vocabulary
-
-| Status          | Meaning                                                                   |
-| --------------- | ------------------------------------------------------------------------- |
-| **Confirmed**   | Supported by available implementation/context evidence                    |
-| **Proposed**    | Target architecture recommendation requiring review/approval              |
-| **TBD**         | Required information is not currently available                           |
-| **To Validate** | A hypothesis that must be checked against implementation/runtime evidence |
-| **Deprecated**  | Previously accepted but no longer valid                                   |
-| **Approved**    | Reviewed and formally accepted architecture decision                      |
-
----
-
-## 9. Architecture Repository Rules
-
-- Do not document assumptions as confirmed facts.
-- Link architecture decisions to ADRs where practical.
-- Keep As-Is and Target-State views separate.
-- Record important exceptions explicitly.
-- Review architecture when major business, technology, security or regulatory requirements change.
-- Keep diagrams and textual descriptions consistent.
-- Prefer traceability from **Business Requirement → Architecture Decision → Implementation → Outcome**.
