@@ -967,7 +967,42 @@ Application / Organization Matrix
 
 ## 8. Phase D: Technology Architecture
 
+Technology Architecture defines the technology environment required to support the target Business, Data, and Application Architectures. In simple terms:
+
+- Business tells us what the enterprise needs.
+- Data and Applications tell us what information and systems are required.
+- Technology Architecture tells us what technology will run and support those systems.
+
+**Primary purpose** Develop the Target Technology Architecture that enables the Architecture Vision and supports the Business, Data and Application Architectures.
+
+**Objectives**
+
+*Objective 1* — Develop the Target Technology Architecture
+Define the future technology architecture needed to support the Architecture Vision, Business, Data, and Application Architectures.
+In simple terms: What technology do we need in the future?
+
+*Objective 2* — Identify Roadmap Components
+Identify what needs to change to move from the Baseline Technology Architecture to the Target Technology Architecture.
+In simple terms: What technology changes are required to get there?
+
+Technology Stack/Portfolio Catalog
+
+| ID      | Technology           | Category             | Purpose               |
+| ------- | -------------------- | -------------------- | --------------------- |
+| TEC-001 | Java 25              | Runtime              | Application runtime   |
+| TEC-002 | Spring Boot          | Application Platform | Backend services      |
+| TEC-003 | Oracle Database 26ai | Database             | Enterprise data       |
+| TEC-004 | Nginx                | Web                  | Reverse proxy         |
+| TEC-005 | Docker               | Container            | Application packaging |
+| TEC-006 | Kubernetes           | Orchestration        | Container management  |
+
 ## 9. Phase E: Opportunities and Solutions
+
+Phase E identifies the solution options and transition approach needed to move from the Baseline Architecture toward the Target Architecture. We now move from designing the architecture to deciding how to realize the Target Architecture. Your course outline for Phase E contains.
+
+1. Interoperability & Risk Management
+2. Architecture Roadmap
+3. Implementation and Migration Plan
 
 ## 10. Phase F: Migration Planning
 
