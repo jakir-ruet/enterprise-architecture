@@ -805,6 +805,166 @@ Target Business Architecture
 
 ## 7. Phase C: Information Systems Architecture
 
+It focuses on two architecture areas:
+
+- Data Architecture
+- Application Architecture
+
+> The phase identifies gaps between the Baseline and Target Data & Application Architectures.
+
+```bash
+Phase B
+Business Architecture
+       │
+       │ What does the business need?
+       ▼
+Phase C
+Information Systems Architecture
+       │
+       ├── Data Architecture
+       │
+       └── Application Architecture
+       │
+       ▼
+Phase D
+Technology Architecture
+```
+
+The Two Parts of Phase C
+
+| Architecture                 | Main Question                                                                                         |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Data Architecture**        | What information/data does the enterprise need?                                                       |
+| **Application Architecture** | What applications/services are needed to manage and support that information and business capability? |
+
+Steps & Approach
+
+| Step  | Activity                                                     |
+| ----- | ------------------------------------------------------------ |
+| **1** | Select reference models, viewpoints and tools                |
+| **2** | Develop Baseline Application & Data Architecture Description |
+| **3** | Develop Target Application & Data Architecture Description   |
+| **4** | Perform Gap Analysis                                         |
+| **5** | Define candidate roadmap components                          |
+| **6** | Continue to the remaining Phase C activities                 |
+
+Perform Gap Analysis
+
+| Area            | Baseline                | Target            | Gap                          |
+| --------------- | ----------------------- | ----------------- | ---------------------------- |
+| Employee Portal | None                    | Digital portal    | New application              |
+| Integration     | Manual                  | API-based         | Integration capability       |
+| Documents       | File/email              | Document service  | Document management          |
+| Workflow        | Manual                  | Automated         | Workflow application/service |
+| IAM             | Manual provisioning     | Automated         | IAM integration              |
+| Employee data   | Multiple/manual sources | Controlled source | Data management improvement  |
+
+> The slide specifically describes Phase C as identifying gaps between the Baseline and Target Data & Application Architectures.
+
+Phase B vs Phase C
+
+| Phase       | Architecture                     | Main Focus                                               |
+| ----------- | -------------------------------- | -------------------------------------------------------- |
+| **Phase B** | Business Architecture            | Business capabilities, processes, organization, services |
+| **Phase C** | Information Systems Architecture | Data + Applications                                      |
+| **Phase D** | Technology Architecture          | Technology infrastructure/platform                       |
+
+**Data Architecture Artifacts**
+
+- Data Entity/Data Component Catalog
+- Application/Data Matrix
+- Conceptual Data Diagram
+- Data Dissemination Diagram
+- Data Entity/Business Function Matrix
+- Logical Data Diagram
+- Data Security Diagram
+- Data Migration Diagram
+- Data Lifecycle Diagram
+
+| Artifact                                 | What it represents                               |
+| ---------------------------------------- | ------------------------------------------------ |
+| **Data Entity/Data Component Catalog**   | Inventory of important data entities/components  |
+| **Application/Data Matrix**              | Which applications use/manage which data         |
+| **Conceptual Data Diagram**              | High-level relationships between data entities   |
+| **Data Dissemination Diagram**           | How data is distributed/shared                   |
+| **Data Entity/Business Function Matrix** | Relationship between business functions and data |
+| **Logical Data Diagram**                 | More detailed logical structure of data          |
+| **Data Security Diagram**                | Data security considerations                     |
+| **Data Migration Diagram**               | Movement of data between systems                 |
+| **Data Lifecycle Diagram**               | Data movement through its lifecycle              |
+
+Data Entity/Data Component Catalog
+
+| ID     | Data Entity       | Description                       |
+| ------ | ----------------- | --------------------------------- |
+| DE-001 | Employee          | Employee master information       |
+| DE-002 | Department        | Organizational department         |
+| DE-003 | Position          | Employee position                 |
+| DE-004 | Employment        | Employment details                |
+| DE-005 | Employee Document | Employee-related documents        |
+| DE-006 | Onboarding        | Onboarding status and information |
+
+Application/Data Matrix
+
+| Data Entity       | Employee Portal | HR System |  IAM  |
+| ----------------- | :-------------: | :-------: | :---: |
+| Employee          |        X        |     X     |   X   |
+| Department        |        X        |     X     |       |
+| Employment        |                 |     X     |       |
+| Employee Document |        X        |     X     |       |
+| Onboarding        |        X        |     X     |       |
+| Identity          |                 |           |   X   |
+
+Data Entity / Business Function Matrix
+
+| Data Entity       | Employee Onboarding | Payroll | Recruitment |
+| ----------------- | :-----------------: | :-----: | :---------: |
+| Employee          |          X          |    X    |      X      |
+| Employment        |          X          |    X    |             |
+| Payroll           |                     |    X    |             |
+| Recruitment       |                     |         |      X      |
+| Employee Document |          X          |         |      X      |
+
+**Application Architecture Artifacts**
+
+Application Portfolio Catalog
+
+| ID       | Name                             | Category |
+| -------- | -------------------------------- | -------- |
+| L_APP_01 | Enterprise Resource Planning     | Platform |
+| L_APP_02 | Customer Relationship Management | Platform |
+| L_APP_03 | Data Warehouse                   | Platform |
+
+Application / Organization Matrix
+
+| Application | Sales |  HR   |
+| ----------- | :---: | :---: |
+| CRM         |   X   |       |
+| ERP         |       |   X   |
+| DWH         |   X   |   X   |
+| DMS         |   X   |   X   |
+
+Application Portfolio Catalog
+
+| ID      | Application          | Purpose                        |
+| ------- | -------------------- | ------------------------------ |
+| APP-001 | Employee Portal      | Employee self-service          |
+| APP-002 | HR System            | Employee management            |
+| APP-003 | Workflow Service     | Process automation             |
+| APP-004 | Document Management  | Employee documents             |
+| APP-005 | IAM                  | Identity and access management |
+| APP-006 | Notification Service | Email/SMS notifications        |
+
+Application / Organization Matrix
+
+| Application         |  HR   |  IT   | Finance | Employee |
+| ------------------- | :---: | :---: | :-----: | :------: |
+| Employee Portal     |   X   |   X   |         |    X     |
+| HR System           |   X   |       |         |          |
+| IAM                 |       |   X   |         |    X     |
+| Payroll             |   X   |       |    X    |          |
+| Document Management |   X   |   X   |         |    X     |
+
 ## 8. Phase D: Technology Architecture
 
 ## 9. Phase E: Opportunities and Solutions
