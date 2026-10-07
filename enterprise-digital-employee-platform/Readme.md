@@ -129,30 +129,30 @@ HR ─────────► Payroll
 **The target experience:**
 
 ```bash
-						EMPLOYEE
-							│
-							▼
-				┌─────────────────┐
-				│ Employee Portal │
-				└────────┬────────┘
-							│
-							▼
-				┌──────────────┐
-				│ API Gateway  │
-				└──────┬───────┘
+					EMPLOYEE
 						│
+						▼
+			   ┌─────────────────┐
+			   │ Employee Portal │
+			   └────────┬────────┘
+						│
+						▼
+			   ┌──────────────┐
+			   │ API Gateway  │
+			   └──────┬───────┘
+					  │
 		┌─────────────┼─────────────┐
 		▼             ▼             ▼
 Employee        Leave       Attendance
 Service        Service       Service
 		│             │             │
 		└─────────────┼─────────────┘
-						│
-				Integration Layer
-						│
+                      │
+              Integration Layer
+                      │
 		┌─────────────┼─────────────┐
 		▼             ▼             ▼
-	HR           Payroll        IAM
+	    HR           Payroll        IAM
 ```
 
 ### Business capabilities

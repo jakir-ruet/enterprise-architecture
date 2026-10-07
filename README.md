@@ -1,4 +1,112 @@
-# Ads Promotional System — Enterprise Architecture
+## [More about me](https://www.linkedin.com/in/jakir-ruet)
+
+## Welcome to TOGAF Foundation Study Roadmap
+
+|    # | Course Module                                  | What we will learn                                                    |
+| ---: | ---------------------------------------------- | --------------------------------------------------------------------- |
+|    1 | **Introduction to Enterprise Architecture**    | Enterprise, Architecture, EA, purpose, benefits                       |
+|    2 | **Architecture Domains**                       | Business, Data, Application, Technology                               |
+|    3 | **Architecture States**                        | Baseline, Target, Candidate, Transition, Resting                      |
+|    4 | **Architecture Scope & Levels**                | Scope, depth, domains, time, Strategic/Segment/Capability             |
+|    5 | **Architecture Partitioning & Abstraction**    | Partitions, Contextual, Conceptual, Logical, Physical                 |
+|    6 | **Building Blocks**                            | BB, ABB, SBB                                                          |
+|    7 | **TOGAF Standard**                             | Purpose, suitability, tailoring, structure                            |
+|    8 | **Architecture Development Method (ADM)**      | ADM purpose and complete lifecycle                                    |
+|    9 | **Preliminary Phase**                          | EA capability, principles, governance                                 |
+|   10 | **Phase A — Architecture Vision**              | Vision, scope, stakeholders, Statement of Architecture Work           |
+|   11 | **Phase B — Business Architecture**            | Business capabilities, processes, gap analysis                        |
+|   12 | **Phase C — Information Systems Architecture** | Data + Application Architecture                                       |
+|   13 | **Phase D — Technology Architecture**          | Technology infrastructure and platforms                               |
+|   14 | **Phase E — Opportunities & Solutions**        | Solutions, transition architectures, roadmap                          |
+|   15 | **Phase F — Migration Planning**               | Migration strategy and implementation planning                        |
+|   16 | **Phase G — Implementation Governance**        | Architecture contracts, compliance                                    |
+|   17 | **Phase H — Architecture Change Management**   | Change requests and continuous architecture                           |
+|   18 | **Requirements Management + Applying ADM**     | Requirements, iteration, trade-offs                                   |
+|   19 | **Content, Governance & Exam Preparation**     | Content Framework, Enterprise Continuum, Repository, governance, exam |
+
+```bash
+Enterprise Digital Employee Platform
+│
+├── Business Architecture
+│   ├── Business Capability Map
+│   ├── Business Processes
+│   ├── Value Streams
+│   └── Organization Model
+│
+├── Data Architecture
+│   ├── Information Concepts
+│   ├── Data Entities
+│   ├── Data Model
+│   └── Data Governance
+│
+├── Application Architecture
+│   ├── Application Portfolio
+│   ├── Application Services
+│   ├── APIs
+│   └── Integration Architecture
+│
+├── Technology Architecture
+│   ├── Infrastructure
+│   ├── Cloud
+│   ├── Kubernetes
+│   ├── Runtime
+│   └── Network
+│
+├── Migration Roadmap
+│
+├── Architecture Governance
+│
+└── Architecture Repository
+```
+
+### Enterprise Architecture
+
+It's a structured approach to aligning business strategy with technology, people, processes, applications, data, and infrastructure. The purpose is not simply to design IT systems, but to ensure that technology investments support business objectives, reduce complexity and risk, improve efficiency, and provide a scalable foundation for future growth.
+
+Example:
+Suppose a group has 20 companies using different ERP, HR, CRM, and reporting systems. As an Enterprise Architect, I would:
+
+- Understand business capabilities.
+- Inventory existing applications.
+- Identify duplicated systems.
+- Define common integration standards.
+- Establish enterprise data ownership.
+- Define target architecture.
+- Create a phased modernization roadmap.
+
+> The objective would not simply be "replace old systems." The objective would be business standardization, integration, security, scalability, and cost optimization.
+
+### Need of Enterprise Architecture
+
+According to your course, EA helps manage complexity and risk, support change, optimize processes, connect digital capabilities to changing business needs, balance transformation and operational efficiency, and enable enterprise-wide synergies.
+
+- More effective strategic decision-making
+- More effective and efficient business operations
+- More effective digital transformation
+- Better return on existing investment
+- Reduced risk for future investment
+- Faster and cheaper procurement
+- Balancing conflicting demands
+
+## The Open Group Architecture Framework (TOGAF)
+
+It's a proven and widely used methodology and framework for developing enterprise architecture. It helps organizations design, evaluate, and build the right architecture to support their business goals.
+
+It was first developed in 1995 based on a framework from the **US Department of Defense** and is maintained by **The Open Group**, a vendor-neutral consortium.
+
+### Architecture Domains
+
+TOGAF provides a structured approach to designing architecture across four key domains:
+
+1. **Business Architecture:** Defines business strategy, governance, organization, and key processes.
+2. **Data Architecture:** Describes the structure of logical and physical data assets.
+3. **Application Architecture:** Provides a blueprint for individual application systems and their interactions.
+4. **Technology Architecture:** Describes the software and hardware capabilities needed to support business, data, and application services.
+
+#### Order to Cash Process (End to End) through Architecture Domain
+
+![Order to Cash Process](/img/enterprise-architecture-layers.png)
+![Order to Cash Process](/img/ordertocash-architecture-layers.png)
 
 ## 1. Purpose
 
