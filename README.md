@@ -2,27 +2,27 @@
 
 ## Welcome to TOGAF Foundation Study Roadmap
 
-|    # | Course Module                                  | What we will learn                                                    |
-| ---: | ---------------------------------------------- | --------------------------------------------------------------------- |
-|    1 | **Introduction to Enterprise Architecture**    | Enterprise, Architecture, EA, purpose, benefits                       |
-|    2 | **Architecture Domains**                       | Business, Data, Application, Technology                               |
-|    3 | **Architecture States**                        | Baseline, Target, Candidate, Transition, Resting                      |
-|    4 | **Architecture Scope & Levels**                | Scope, depth, domains, time, Strategic/Segment/Capability             |
-|    5 | **Architecture Partitioning & Abstraction**    | Partitions, Contextual, Conceptual, Logical, Physical                 |
-|    6 | **Building Blocks**                            | BB, ABB, SBB                                                          |
-|    7 | **TOGAF Standard**                             | Purpose, suitability, tailoring, structure                            |
-|    8 | **Architecture Development Method (ADM)**      | ADM purpose and complete lifecycle                                    |
-|    9 | **Preliminary Phase**                          | EA capability, principles, governance                                 |
-|   10 | **Phase A — Architecture Vision**              | Vision, scope, stakeholders, Statement of Architecture Work           |
-|   11 | **Phase B — Business Architecture**            | Business capabilities, processes, gap analysis                        |
-|   12 | **Phase C — Information Systems Architecture** | Data + Application Architecture                                       |
-|   13 | **Phase D — Technology Architecture**          | Technology infrastructure and platforms                               |
-|   14 | **Phase E — Opportunities & Solutions**        | Solutions, transition architectures, roadmap                          |
-|   15 | **Phase F — Migration Planning**               | Migration strategy and implementation planning                        |
-|   16 | **Phase G — Implementation Governance**        | Architecture contracts, compliance                                    |
-|   17 | **Phase H — Architecture Change Management**   | Change requests and continuous architecture                           |
-|   18 | **Requirements Management + Applying ADM**     | Requirements, iteration, trade-offs                                   |
-|   19 | **Content, Governance & Exam Preparation**     | Content Framework, Enterprise Continuum, Repository, governance, exam |
+|      # | Course Module                                 | What we will learn                                                                                                      |
+| -----: | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+|  **1** | **Introduction to Enterprise Architecture**   | Enterprise Architecture definition, purpose & benefits                                                                  |
+|  **2** | **Architecture Domains**                      | Domains, Levels, Partitions & Abstractions                                                                              |
+|  **3** | **Architecture Development Method (ADM)**     | ADM phases, Artifacts & Deliverables, Building Blocks, Stakeholders, Concerns, Viewpoints & Views                       |
+|  **4** | **Preliminary Phase**                         | Purpose, Objectives, Steps & Approach, Architecture Principles                                                          |
+|  **5** | **Phase A: Architecture Vision**              | Statement of Architecture Work, Business Transformation Readiness Assessment, Architecture Vision & Definition Document |
+|  **6** | **Phase B: Business Architecture**            | Purpose, Objectives, Steps & Approach, Gap Analysis                                                                     |
+|  **7** | **Phase C: Information Systems Architecture** | Purpose, Objectives, Steps & Approach, Application & Data Architecture Artifacts                                        |
+|  **8** | **Phase D: Technology Architecture**          | Purpose, Objectives, Steps & Approach, Technology Architecture Artifacts                                                |
+|  **9** | **Phase E: Opportunities and Solutions**      | Interoperability & Risk Management, Architecture Roadmap, Implementation and Migration Plan                             |
+| **10** | **Phase F: Migration Planning**               | Purpose, Objectives, Steps & Approach, Implementation Governance Model                                                  |
+| **11** | **Phase G: Implementation Governance**        | Architecture Contracts, Compliance Assessment, Support of Agile Software Development                                    |
+| **12** | **Phase H: Architecture Change Management**   | Purpose, Objectives, Steps & Approach, Change Request                                                                   |
+| **13** | **Requirements Management Phase**             | Purpose, Objectives, Steps & Approach, Requirements Impact Assessment                                                   |
+| **14** | **Applying the ADM**                          | ADM Techniques & Iterations, Information Flow, Architecture Alternatives & Trade-off Method                             |
+| **15** | **Content & Core Concepts**                   | Content Framework & Enterprise Metamodel, Enterprise Continuum, Architecture Repository                                 |
+| **16** | **Architecture Governance & EA Capability**   | Corporate & EA Governance, Architecture Board & Capability                                                              |
+| **17** | **Exam Preparation & Definitions**            | Key Definitions, Exam Preparation & Time Management, Question Analysis & Answer Selection                               |
+| **18** | **Practice Test**                             | TOGAF EA Part 1 Sample Exam, 40 Questions, Answers & Explanations                                                       |
+| **19** | **Wrap-up**                                   | Next Steps & Course Materials                                                                                           |
 
 ```bash
 Enterprise Digital Employee Platform
@@ -59,6 +59,10 @@ Enterprise Digital Employee Platform
 └── Architecture Repository
 ```
 
+## 1. Introduction to Enterprise Architecture
+
+**The Open Group Architecture Framework (TOGAF)** is a proven and widely used methodology and framework for developing enterprise architecture. It helps organizations design, evaluate, and build the right architecture to support their business goals. It was first developed in 1995 based on a framework from the **US Department of Defense** and is maintained by **The Open Group**, a vendor-neutral consortium.
+
 ### Enterprise Architecture
 
 It's a structured approach to aligning business strategy with technology, people, processes, applications, data, and infrastructure. The purpose is not simply to design IT systems, but to ensure that technology investments support business objectives, reduce complexity and risk, improve efficiency, and provide a scalable foundation for future growth.
@@ -76,7 +80,7 @@ Suppose a group has 20 companies using different ERP, HR, CRM, and reporting sys
 
 > The objective would not simply be "replace old systems." The objective would be business standardization, integration, security, scalability, and cost optimization.
 
-### Need of Enterprise Architecture
+### Need/Purpose of Enterprise Architecture
 
 According to your course, EA helps manage complexity and risk, support change, optimize processes, connect digital capabilities to changing business needs, balance transformation and operational efficiency, and enable enterprise-wide synergies.
 
@@ -88,13 +92,19 @@ According to your course, EA helps manage complexity and risk, support change, o
 - Faster and cheaper procurement
 - Balancing conflicting demands
 
-## The Open Group Architecture Framework (TOGAF)
+### Benefits of Enterprise Architecture
 
-It's a proven and widely used methodology and framework for developing enterprise architecture. It helps organizations design, evaluate, and build the right architecture to support their business goals.
+| #     | Benefit                                              | What it means                                                                                                     |
+| ----- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **1** | **More effective strategic decision-making**         | Gives leadership an enterprise-wide view for making better architecture and investment decisions.                 |
+| **2** | **More effective and efficient business operations** | Helps identify duplication, inefficiencies, and opportunities to improve business processes.                      |
+| **3** | **More effective digital transformation**            | Connects digital initiatives with business needs and the target architecture.                                     |
+| **4** | **Better return on existing investment**             | Helps organizations maximize the value of existing applications, data, and technology investments.                |
+| **5** | **Reduced risk for future investment**               | Architecture principles, standards, and roadmaps reduce the risk of making inappropriate technology investments.  |
+| **6** | **Faster and cheaper procurement**                   | Reusable standards, reference architectures, and defined technology choices can simplify procurement.             |
+| **7** | **Balancing conflicting demands**                    | Helps balance competing requirements such as cost, security, agility, business needs, and technology constraints. |
 
-It was first developed in 1995 based on a framework from the **US Department of Defense** and is maintained by **The Open Group**, a vendor-neutral consortium.
-
-### Architecture Domains
+## 2. Architecture Domains
 
 TOGAF provides a structured approach to designing architecture across four key domains:
 
@@ -103,10 +113,442 @@ TOGAF provides a structured approach to designing architecture across four key d
 3. **Application Architecture:** Provides a blueprint for individual application systems and their interactions.
 4. **Technology Architecture:** Describes the software and hardware capabilities needed to support business, data, and application services.
 
-#### Order to Cash Process (End to End) through Architecture Domain
+### Order to Cash Process (End to End) through Architecture Domain
 
 ![Order to Cash Process](/img/enterprise-architecture-layers.png)
 ![Order to Cash Process](/img/ordertocash-architecture-layers.png)
+
+## 3. Architecture Development Method (ADM)
+
+ADM provides a structured cycle for moving an enterprise from its current architecture (Baseline) toward its desired future architecture (Target). The basic idea
+
+```bash
+Current State
+   │
+   │  ADM
+   ↓
+Architecture Development
+   │
+   ↓
+Target State
+   │
+   ↓
+Implementation & Governance
+   │
+   ↓
+Change Management
+   │
+   └──────────────→ New Architecture Cycle
+```
+
+**ADM Phases** The ADM consists of a series of phases. The major flow is:
+
+```bash
+                ┌─────────────────────┐
+                │ Preliminary Phase   │
+                └──────────┬──────────┘
+                            ↓
+                ┌─────────────────────┐
+                │ Phase A             │
+                │ Architecture Vision │
+                └──────────┬──────────┘
+                            ↓
+            ┌───────────────┴───────────────┐
+            ↓                               ↓
+    ┌─────────────┐                 ┌─────────────┐
+    │ Phase B     │                 │ Phase C     │
+    │ Business    │                 │ Information │
+    │ Architecture│                 │ Systems     │
+    └──────┬──────┘                 └──────┬──────┘
+            └───────────────┬───────────────┘
+                            ↓
+                ┌─────────────────────┐
+                │ Phase D             │
+                │ Technology          │
+                │ Architecture        │
+                └──────────┬──────────┘
+                            ↓
+                ┌─────────────────────┐
+                │ Phase E             │
+                │ Opportunities &     │
+                │ Solutions           │
+                └──────────┬──────────┘
+                            ↓
+                ┌─────────────────────┐
+                │ Phase F             │
+                │ Migration Planning  │
+                └──────────┬──────────┘
+                            ↓
+                ┌─────────────────────┐
+                │ Phase G             │
+                │ Implementation      │
+                │ Governance           │
+                └──────────┬──────────┘
+                            ↓
+                ┌─────────────────────┐
+                │ Phase H             │
+                │ Architecture Change │
+                │ Management          │
+                └──────────┬──────────┘
+                            │
+                            └──────→ New ADM cycle
+```
+
+**The Most Important Concept**
+
+| Step                       | Logic / Key Question                                      | ADM Phase                                      | Main Focus                                                                                  |
+| -------------------------- | --------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **1. Prepare**             | **Can we do architecture effectively?**                   | **Preliminary Phase**                          | Establish the Architecture Capability, governance, principles, organization, and approach   |
+| **2. Establish Direction** | **Where do we want to go?**                               | **Phase A — Architecture Vision**              | Define the vision, scope, stakeholders, and desired future direction                        |
+| **3. Design**              | **What should the future enterprise look like?**          | **Phase B — Business Architecture**            | Define the Target Business Architecture                                                     |
+|                            |                                                           | **Phase C — Information Systems Architecture** | Define **Data & Application Architecture**                                                  |
+|                            |                                                           | **Phase D — Technology Architecture**          | Define the Target Technology Architecture                                                   |
+| **4. Plan the Change**     | **How do we get there?**                                  | **Phase E — Opportunities & Solutions**        | Identify solution options, transition architectures, and major implementation opportunities |
+|                            |                                                           | **Phase F — Migration Planning**               | Develop migration strategy, roadmap, and implementation plan                                |
+| **5. Implement**           | **Are we implementing according to the architecture?**    | **Phase G — Implementation Governance**        | Govern implementation and ensure compliance with the approved architecture                  |
+| **6. Manage Change**       | **What happens when the business or technology changes?** | **Phase H — Architecture Change Management**   | Manage architecture changes and determine when a new ADM cycle is required                  |
+| **Continuous**             | **Are requirements still valid and being addressed?**     | **Requirements Management**                    | Identify, assess, track, and manage requirements throughout the ADM cycle                   |
+
+> Easy way to remember: `Prepare → Direction → Design → Plan → Implement → Change`
+
+**ADM vs Architecture Domains**
+
+| Aspect                   | Architecture Domains                                          | ADM                                                                          |
+| ------------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Fundamental question** | **What are we architecting?**                                 | **How do we develop the architecture?**                                      |
+| **Purpose**              | Organize the architecture into major areas                    | Provide the method/process for developing and managing architecture          |
+| **Main components**      | Business, Data, Application, Technology                       | Preliminary, A, B, C, D, E, F, G, H                                          |
+| **Business**             | Business Architecture                                         | **Phase B** develops Business Architecture                                   |
+| **Data**                 | Data Architecture                                             | **Phase C** develops Data Architecture                                       |
+| **Application**          | Application Architecture                                      | **Phase C** develops Application Architecture                                |
+| **Technology**           | Technology Architecture                                       | **Phase D** develops Technology Architecture                                 |
+| **Nature**               | Architecture **content / subject areas**                      | Architecture **development method / process**                                |
+| **Example**              | Customer Management, Employee Management, Technology Platform | Define Vision → Design Architecture → Plan Migration → Govern Implementation |
+| **Relationship**         | Defines **what areas** the architecture covers                | Defines **how and when** those areas are developed                           |
+| **Exam keyword**         | **What**                                                      | **How**                                                                      |
+
+### Artifacts, Deliverables & Building Blocks
+
+These three terms are important because they describe what is produced during architecture development. The three concepts.
+
+| Concept            | Meaning                                                                       | Simple Question                   |
+| ------------------ | ----------------------------------------------------------------------------- | --------------------------------- |
+| **Deliverable**    | A formally reviewed and agreed work product that is delivered to stakeholders | **What do we deliver?**           |
+| **Artifact**       | A work product that describes some aspect of the architecture                 | **What do we document?**          |
+| **Building Block** | A reusable component of business, IT, or architecture capability              | **What can we reuse/build with?** |
+
+#### Deliverable
+
+A deliverable is a formally reviewed output that is agreed with stakeholders and usually represents the completion of significant architecture work.
+
+| Deliverable                      | Purpose                                                       |
+| -------------------------------- | ------------------------------------------------------------- |
+| Architecture Definition Document | Describes the architecture                                    |
+| Architecture Vision              | Communicates the desired architectural direction              |
+| Architecture Roadmap             | Shows how the enterprise moves toward the Target Architecture |
+| Implementation & Migration Plan  | Defines how implementation will be performed                  |
+
+```bash
+Architecture Work
+       ↓
+Analysis
+       ↓
+Documentation
+       ↓
+Review
+       ↓
+Agreement
+       ↓
+DELIVERABLE
+```
+
+> A deliverable is therefore more than just an informal document.
+
+#### Artifact
+
+An artifact is a work product that describes an aspect of the architecture. Artifacts can generally be categorized as:
+
+| Artifact Category | Focus                                     | Example                           |
+| ----------------- | ----------------------------------------- | --------------------------------- |
+| **Catalog**       | Lists things                              | Application Portfolio Catalog     |
+| **Matrix**        | Shows relationships                       | Application/Data Matrix           |
+| **Diagram**       | Shows structure or relationships visually | Application Communication Diagram |
+
+```bash
+Application       Data
+-------------------------
+Employee Service  Employee
+Leave Service     Leave
+Payroll Service   Payroll
+```
+
+#### Building Block
+
+Building Block represents a potentially reusable component of an architecture. Think of it as a piece from which an architecture can be constructed.
+
+```bash
+Enterprise Digital Employee Platform
+│
+├── Authentication Building Block
+├── Employee Management Building Block
+├── Leave Management Building Block
+├── Notification Building Block
+├── API Gateway Building Block
+└── Audit Logging Building Block
+```
+
+> In stead of designing everything from scratch, the organization can reuse approved building blocks.
+
+### Architecture Building Blocks vs Solution Building Blocks
+
+This distinction is useful in TOGAF.
+
+| Type                                  | Meaning                                        | Example                                                        |
+| ------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------- |
+| **Architecture Building Block (ABB)** | Defines **what capability is required**        | Authentication capability                                      |
+| **Solution Building Block (SBB)**     | Defines **how that capability is implemented** | Keycloak, Microsoft Entra ID, or another approved IAM solution |
+
+> - ABB > What is needed
+> - SBB > How it is implemented
+
+### Stakeholders, Concerns, Viewpoints & Views
+
+Different stakeholders need different views of the same architecture.
+
+#### Stakeholder
+
+A stakeholder is a person, team, organization, or group that has an interest in the architecture or is affected by it. For an Enterprise Digital Employee Platform, stakeholders could include:
+
+| Stakeholder                | Main Interest                              |
+| -------------------------- | ------------------------------------------ |
+| CEO / Executive Management | Business value, investment, transformation |
+| HR                         | Employee processes and capabilities        |
+| Finance                    | Payroll and financial data                 |
+| IT Management              | Architecture, cost, operations             |
+| Enterprise Architect       | Overall architecture alignment             |
+| Security Team              | Security, compliance, risk                 |
+| Developers                 | Application design and APIs                |
+| Operations Team            | Infrastructure, availability, monitoring   |
+| Employees                  | Usability and employee services            |
+
+#### Concern
+
+A concern is something important to a stakeholder that the architecture needs to address.
+Different stakeholders have different concerns.
+
+| Stakeholder          | Example Concern             |
+| -------------------- | --------------------------- |
+| CEO                  | Business value              |
+| CFO                  | Cost / ROI                  |
+| HR                   | Process efficiency          |
+| Security Team        | Security and compliance     |
+| Enterprise Architect | Architecture consistency    |
+| Developer            | API and application design  |
+| Operations           | Availability and monitoring |
+| Employee             | Usability and performance   |
+
+#### Viewpoint
+
+A viewpoint defines how an architecture will be viewed to address particular stakeholder concerns.
+Think of it as a template or perspective for creating a view.
+
+| Concept         | Meaning                                                         |
+| --------------- | --------------------------------------------------------------- |
+| **Stakeholder** | Who is interested?                                              |
+| **Concern**     | What do they care about?                                        |
+| **Viewpoint**   | How should we look at the architecture to address that concern? |
+| **View**        | The actual representation produced using that viewpoint         |
+
+#### View
+
+A view is the actual representation of the architecture from a particular viewpoint.
+For example, a security stakeholder may need a security view.
+
+```bash
+Security View
+     ↓
+Identity
+     ↓
+Authentication
+     ↓
+Authorization
+     ↓
+Encryption
+     ↓
+Audit
+```
+
+## 4. Preliminary Phase
+
+The primary purpose is to create and establish the Architecture Capability of the enterprise. this module covers.
+
+1. Purpose, Objectives, Steps & Approach
+2. Architecture Principles
+
+**Architecture Capability** is the organization's ability to perform, govern, maintain, and use Enterprise Architecture effectively.
+It involves areas such as:
+
+| Area             | What needs to be established          |
+| ---------------- | ------------------------------------- |
+| **Organization** | EA team and responsibilities          |
+| **Governance**   | Architecture governance structure     |
+| **Principles**   | Architecture principles               |
+| **Processes**    | Architecture processes                |
+| **People**       | Required skills and roles             |
+| **Tools**        | Architecture tools and repositories   |
+| **Methods**      | TOGAF and other applicable methods    |
+| **Standards**    | Architecture and technology standards |
+| **Resources**    | Budget, time and supporting resources |
+
+**Objectives of the Preliminary** Phase the Preliminary Phase has two broad objectives:
+
+1. Objective 1: Determine the desired Architecture Capability for the enterprise.
+2. Objective 2: Establish the Architecture Capability.
+
+> This means we first determine what capability is needed, then establish the organizational capability to deliver it.
+
+**Major Activities** The Preliminary Phase addresses several important activities.
+
+| Activity                                     | Purpose                                                               |
+| -------------------------------------------- | --------------------------------------------------------------------- |
+| **Review organizational context**            | Understand the enterprise and its environment                         |
+| **Scope affected organizations**             | Determine which parts of the enterprise are involved                  |
+| **Identify existing frameworks and methods** | Understand existing EA, governance and management approaches          |
+| **Set architecture maturity target**         | Determine the desired level of architecture capability                |
+| **Define EA organizational model**           | Establish roles, responsibilities and organizational structure        |
+| **Define architecture governance**           | Establish how architecture decisions will be governed                 |
+| **Identify resources**                       | Determine people, budget, tools and other resources                   |
+| **Select architecture tools**                | Establish tools for modeling, documentation and repository management |
+| **Define architecture principles**           | Establish guiding principles for architecture decisions               |
+| **Tailor the TOGAF framework**               | Adapt TOGAF to the organization's context                             |
+
+**Preliminary Phase — Overall Flow**
+
+```bash
+Understand Enterprise Context
+          ↓
+Identify Drivers & Requirements
+          ↓
+Determine Architecture Work Requirements
+          ↓
+Define Architecture Principles
+          ↓
+Select / Tailor Architecture Framework
+          ↓
+Define EA Organization
+          ↓
+Establish Governance
+          ↓
+Evaluate / Define Architecture Capability
+          ↓
+Architecture Capability Established
+          ↓
+       Phase A
+```
+
+Let's apply this to your **Enterprise Digital Employee Platform**. Suppose an organization wants to create an enterprise-wide employee platform. Before designing the platform, we shouldn't immediately start drawing microservices. We first establish the architecture capability.
+
+| Preliminary Activity   | Digital Employee Platform Example                              |
+| ---------------------- | -------------------------------------------------------------- |
+| Organizational context | HR, Finance, IT, Security and business units                   |
+| Scope                  | Employee management across the enterprise                      |
+| Stakeholders           | HR, CIO, Finance, Security, IT Operations                      |
+| EA organization        | Enterprise Architect + Solution Architects + Domain Architects |
+| Governance             | Architecture Review Board                                      |
+| Principles             | Security by design, API-first, reuse before duplication        |
+| Standards              | Java, Spring Boot, Oracle, API standards, security standards   |
+| Tools                  | Architecture repository and modeling tools                     |
+| Architecture maturity  | Assess current EA maturity and define target                   |
+| Framework              | Tailor TOGAF to organizational requirements                    |
+
+**Preliminary Phase vs Phase A**
+
+| Preliminary Phase                   | Phase A                                         |
+| ----------------------------------- | ----------------------------------------------- |
+| **Prepares the organization**       | **Starts the specific architecture initiative** |
+| Establishes Architecture Capability | Establishes Architecture Vision                 |
+| Defines governance                  | Defines project/initiative scope                |
+| Establishes principles              | Defines stakeholder expectations                |
+| Defines EA organization             | Creates Statement of Architecture Work          |
+| Tailors the framework               | Develops Architecture Vision                    |
+| Establishes methods and tools       | Assesses transformation readiness               |
+
+> - Easy memory
+> - Preliminary = Prepare the architecture capability
+> - Phase A = Start and define the architecture initiative
+
+#### Architecture Principles
+
+Without principles, different teams may make different decisions.
+
+| Situation       | Without Principles                  | With Principles                        |
+| --------------- | ----------------------------------- | -------------------------------------- |
+| API development | Every team chooses its own approach | Common API standards                   |
+| Security        | Security added later                | Security considered from the beginning |
+| Technology      | Teams select different technologies | Approved technology standards          |
+| Data            | Multiple sources of truth           | Defined data ownership                 |
+| Applications    | Duplicate solutions                 | Reuse existing capabilities            |
+| Operations      | Monitoring added later              | Observability designed into services   |
+
+#### Characteristics of Good Architecture Principles
+
+A good principle should be
+
+| Characteristic  | Meaning                                            |
+| --------------- | -------------------------------------------------- |
+| **Clear**       | Easy to understand                                 |
+| **Consistent**  | Does not conflict with other principles            |
+| **Stable**      | Should remain valid for a reasonable period        |
+| **Actionable**  | Can actually guide decisions                       |
+| **Relevant**    | Supports enterprise objectives                     |
+| **Enforceable** | Can be used in governance and architecture reviews |
+
+For your Enterprise Digital Employee Platform, we could define
+
+| ID         | Principle                                       | Statement                                                                                                         |
+| ---------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **BP-001** | Business-driven architecture                    | Architecture decisions must support measurable business outcomes.                                                 |
+| **BP-002** | Capability alignment                            | Applications and technology must align with required business capabilities.                                       |
+| **BP-003** | API-first integration                           | Application capabilities should be exposed through well-defined interfaces where appropriate.                     |
+| **BP-004** | Security by design                              | Security must be treated as an architectural concern throughout the lifecycle.                                    |
+| **BP-005** | Separation of concerns                          | Presentation, business logic, data access and integration responsibilities should remain appropriately separated. |
+| **BP-006** | Observability by design                         | Critical services should provide logs, metrics and operational visibility.                                        |
+| **BP-007** | Automation first                                | Repeatable build, test, deployment and infrastructure processes should be automated.                              |
+| **BP-008** | Reuse before duplication                        | Existing approved capabilities should be reused where practical.                                                  |
+| **BP-009** | Data ownership and accountability               | Critical data should have identified ownership and stewardship.                                                   |
+| **BP-010** | Resilience proportional to business criticality | Availability, backup and recovery controls should reflect business requirements.                                  |
+
+## 5. Phase A: Architecture Vision
+
+## 6. Phase B: Business Architecture
+
+## 7. Phase C: Information Systems Architecture
+
+## 8. Phase D: Technology Architecture
+
+## 9. Phase E: Opportunities and Solutions
+
+## 10. Phase F: Migration Planning
+
+## 11. Phase G: Implementation Governance
+
+## 12. Phase H: Architecture Change Management
+
+## 13. Requirements Management Phase
+
+## 14. Applying the ADM
+
+## 15. Content & Core Concepts
+
+## 16. Architecture Governance & EA Capability
+
+## 17. Exam Preparation & Definitions
+
+## 18. Practice Test
+
+## 19. Wrap-up
+
+---
 
 ## 1. Purpose
 
