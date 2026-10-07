@@ -1004,11 +1004,113 @@ Phase E identifies the solution options and transition approach needed to move f
 2. Architecture Roadmap
 3. Implementation and Migration Plan
 
+Interoperability is the ability to share information and services.
+
+| Type                       | Simple Meaning                                    | Key Question                            |
+| -------------------------- | ------------------------------------------------- | --------------------------------------- |
+| **Operational / Business** | Different parts of the enterprise work together   | How do business units collaborate?      |
+| **Information**            | Information is shared between systems/people      | How is information shared?              |
+| **Technical**              | Technical resources connect/share with each other | How do systems technically communicate? |
+
+Maximize business benefit while minimizing business loss.
+
+| Term                    | Meaning                                                                    |
+| ----------------------- | -------------------------------------------------------------------------- |
+| **Risk**                | Effect of uncertainty on objectives                                        |
+| **Risk Trigger**        | Something inside or outside the transformation that may cause a risk event |
+| **Initial Risk Level**  | Risk level before mitigation                                               |
+| **Residual Risk Level** | Risk level after mitigation                                                |
+| **Risk Mitigation**     | Actions taken to reduce the likelihood or impact of risk                   |
+
+Initial Risk Assessment Matrix
+
+| Effect       | Frequency  | Risk Level             |
+| ------------ | ---------- | ---------------------- |
+| Catastrophic | Frequent   | **Extremely High (E)** |
+| Critical     | Likely     | **High (H)**           |
+| Marginal     | Occasional | **Medium (M)**         |
+| Negligible   | Seldom     | **Low (L)**            |
+| —            | Unlikely   | **Low (L)**            |
+
+| Risk                 | Type                |  Initial Level | Mitigation                  | Residual |
+| -------------------- | ------------------- | -------------: | --------------------------- | -------: |
+| API unavailable      | Technology/Business |           High | HA + monitoring             |   Medium |
+| Employee data breach | Cyber               | Extremely High | Encryption + IAM + audit    |     High |
+| Data mismatch        | Information         |           High | Validation + reconciliation |   Medium |
+| Migration failure    | Business            |           High | Backup + rollback + testing |   Medium |
+
 ## 10. Phase F: Migration Planning
+
+Phase F finalizes the Implementation and Migration Plan and prepares the enterprise for actual implementation.
+
+Purpose - Phase E creates the draft transformation plan. Phase F makes it realistic, prioritized, resourced, and approved.
+
+Objectives
+
+| Objective                                                            | Original meaning                                                                           | Simple meaning                                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| **1. Finalize Architecture Roadmap & Implementation/Migration Plan** | Complete the roadmap and detailed migration plan                                           | **Finalize the roadmap and migration plan.**                                           |
+| **2. Coordinate with enterprise change management**                  | Ensure migration aligns with the organization's overall change approach                    | **Make sure architecture migration fits the organization's overall change portfolio.** |
+| **3. Ensure stakeholders understand value, cost & transitions**      | Make business value, work-package cost, and Transition Architectures clear to stakeholders | **Make sure stakeholders understand value, cost, and transition implications.**        |
+
+Suppose a bank is moving from a legacy core banking platform to a cloud-based platform.
+
+- Objective 1: Finalize the migration roadmap and project plan.
+- Objective 2: Coordinate the migration with other major bank projects, such as CRM modernization and data-platform transformation.
+- Objective 3: Make sure executives understand:
+  - Value: faster digital services
+  - Cost: migration and infrastructure investment
+  - Transition: legacy and new systems may operate together temporarily.
+
+> Phase F = Finalize the plan, align it with enterprise change, and make value/cost/transition clear to stakeholders.
+
+Phase E vs Phase F
+
+| Phase E                                     | Phase F                                   |
+| ------------------------------------------- | ----------------------------------------- |
+| Opportunities & Solutions                   | Migration Planning                        |
+| Identifies work packages                    | Prioritizes migration projects            |
+| Identifies Transition Architectures         | Finalizes transition/migration approach   |
+| Creates roadmap                             | Finalizes roadmap                         |
+| Initializes Implementation & Migration Plan | Completes Implementation & Migration Plan |
+| More solution/transition focused            | More planning/prioritization focused      |
 
 ## 11. Phase G: Implementation Governance
 
+Phase G — Implementation Governance ensures that implementation projects conform to the Target Architecture and provides architectural governance throughout implementation.
+
+| Slide concept                  | Simple meaning                                               |
+| ------------------------------ | ------------------------------------------------------------ |
+| **Ensure compliance**          | Make sure the project follows the **Target Architecture**    |
+| **Guide implementation teams** | Help the project team implement the architecture correctly   |
+| **Manage priorities**          | Balance **success, value, effort, and risk**                 |
+| **Architecture Governance**    | Control architecture decisions during implementation         |
+| **Compliance Review**          | Check whether the implementation follows the architecture    |
+| **Change Requests**            | Govern architecture changes that arise during implementation |
+| **Post-implementation review** | Check the completed implementation                           |
+
 ## 12. Phase H: Architecture Change Management
+
+Phase H makes sure the architecture continues to deliver business value and manages changes that occur after implementation. Phase H Steps
+
+1. Establish value realization process
+2. Deploy monitoring tools
+3. Manage risks
+4. Provide analysis for architecture change management
+5. Develop change requirements to meet performance targets
+6. Manage governance process
+7. Activate the process to implement change
+
+Phase G vs Phase H
+
+| Phase G                          | Phase H                                        |
+| -------------------------------- | ---------------------------------------------- |
+| Implementation Governance        | Architecture Change Management                 |
+| Focuses on implementation        | Focuses on changes after/around implementation |
+| Checks architectural conformance | Manages architectural evolution                |
+| Compliance reviews               | Change analysis                                |
+| Architecture Contracts           | Change Requests                                |
+| “Are we implementing correctly?” | “What needs to change now?”                    |
 
 ## 13. Requirements Management Phase
 
