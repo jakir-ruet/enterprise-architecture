@@ -67,7 +67,7 @@ Enterprise Digital Employee Platform
 
 It's a structured approach to aligning business strategy with technology, people, processes, applications, data, and infrastructure. The purpose is not simply to design IT systems, but to ensure that technology investments support business objectives, reduce complexity and risk, improve efficiency, and provide a scalable foundation for future growth.
 
-Example:
+*Example:*
 Suppose a group has 20 companies using different ERP, HR, CRM, and reporting systems. As an Enterprise Architect, I would:
 
 - Understand business capabilities.
@@ -1114,14 +1114,1112 @@ Phase G vs Phase H
 
 ## 13. Requirements Management Phase
 
+Requirements Management ensures that the right architecture requirements are identified, recorded, prioritized, monitored, changed, and made available to every relevant ADM phase. Your deck describes the Requirements Management Phase as the process that:
+
+- Documents architecture requirements
+- Evaluates requirements
+- Distributes requirements
+- Manages requirements throughout the ADM
+- Maintains traceability from business strategy to requirements
+- Maintains the complete set of requirements, including stakeholder preferences
+
+**Purpose** The deck identifies five major purposes
+
+| Purpose                                             | Meaning                                                              |
+| --------------------------------------------------- | -------------------------------------------------------------------- |
+| Manage architecture requirements throughout the ADM | Requirements are managed continuously                                |
+| Operate the requirements management process         | Maintain the process                                                 |
+| Ensure effective requirements management            | Keep requirements controlled                                         |
+| Provide traceability                                | Connect requirements to vision, mission, business model and strategy |
+| Maintain complete requirements                      | Include stakeholder preferences                                      |
+
+> Easy memory: Manage → Operate → Ensure → Trace → Maintain
+
+**Objectives** The deck gives three objectives:
+
+- *Objective 1* Ensure that the Requirements Management process is sustained and operates for all ADM phases. In simple terms: Requirements Management must work throughout the ADM.
+- *Objective 2* Manage architecture requirements identified during any execution of the ADM cycle or a phase. Meaning: A requirement can appear during any ADM phase.
+- *Objective 3* Ensure that relevant architecture requirements are available for use by each phase as the phase is executed. Meaning: Each phase should have access to the requirements it needs.
+
+Requirements Management — Core Flow
+
+```bash
+Business Goals
+     ↓
+Requirements
+     ↓
+Document
+     ↓
+Prioritize
+     ↓
+Baseline
+     ↓
+Monitor
+     ↓
+New/Changed Requirements
+     ↓
+Impact Assessment
+     ↓
+Update Requirements
+     ↓
+Feed relevant ADM phases
+```
+
+**Requirements Management Steps — 10-Step Summary**
+
+| Step   | Requirement Management Activity         | Key Activities / Details                                                                                                                                    | Main Output / Result                                                                   |
+| ------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **1**  | **Identify Requirements**               | Analyze **business goals & scenarios, management information, value streams, and user experience**. Document the requirements.                              | **Architecture Requirements Specification** + **Architecture Requirements Repository** |
+| **2**  | **Establish Baseline Requirements**     | Establish the baseline based on **approved stakeholder priorities**.                                                                                        | Approved **Baseline Requirements**                                                     |
+| **3**  | **Monitor Baseline Requirements**       | Continuously monitor the baseline requirements to determine whether they remain valid.                                                                      | Validated / monitored baseline                                                         |
+| **4**  | **Identify New & Changed Requirements** | Identify requirements that are **added, modified, or removed**. Re-assess requirement priorities.                                                           | Updated requirements and priorities                                                    |
+| **5**  | **Analyze Changed Requirements**        | Identify changed requirements, record **new priorities and decisions**, resolve conflicts, and generate a **Requirements Impact Statement**.                | **Requirements Impact Statement (Version n)**                                          |
+| **6**  | **Assess Impact**                       | Assess the impact of changed requirements on **previous and current ADM phases**. Decide whether to implement them in the **current or a later ADM cycle**. | **Requirements Impact Statement (Version n+1)**                                        |
+| **7**  | **Implement Phase H Requirements**      | Implement requirements arising from **Phase H — Architecture Change Management**.                                                                           | Change-related requirements incorporated                                               |
+| **8**  | **Update Requirements Repository**      | Update the **Architecture Requirements Repository**, including requirement changes and affected stakeholder views.                                          | Updated Requirements Repository                                                        |
+| **9**  | **Implement Changes**                   | Implement the approved requirement changes.                                                                                                                 | Implemented changes                                                                    |
+| **10** | **Conduct Gap Analysis**                | Conduct Gap Analysis for previous phases, identify **gap requirements**, record them, and revise the **Target Architecture** where necessary.               | Gap requirements + revised Target Architecture                                         |
+
+Easy-to-Remember Flow
+
+| Stage                   |    Steps | Purpose                                                       |
+| ----------------------- | -------: | ------------------------------------------------------------- |
+| **Establish**           |  **1–3** | Identify → Baseline → Monitor                                 |
+| **Manage Changes**      |  **4–6** | Identify changes → Analyze → Assess impact                    |
+| **Integrate**           |  **7–8** | Bring in Phase H requirements → Update repository             |
+| **Implement & Improve** | **9–10** | Implement changes → Gap Analysis → Revise Target Architecture |
+
+> Exam Memory: `Identify → Baseline → Monitor → Change → Analyze → Assess → Implement → Update → Implement → Gap Analysis`
+
+**Requirements Impact Assessment** Requirements Impact Assessment assesses the current architecture requirements and specification to identify:
+
+- What requirements have changed
+- What changes should be made
+- What implications those changes have for the architecture
+
+The deck emphasizes that the approach considers new facts that may invalidate parts of the existing architecture.
+
+Requirements Impact Assessment — Key Activities
+
+| Activity                                 | What it means                                                                                  |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Assess changed requirements**          | Examine the new or modified requirements                                                       |
+| **Assess impact on ADM phases**          | Determine which previous and current ADM phases are affected                                   |
+| **Determine implementation cycle**       | Decide whether the requirement should be addressed in the **current** or a **later ADM cycle** |
+| **Prioritize requirements**              | Consider stakeholder priorities and the results of the assessment                              |
+| **Investigate implications**             | Determine what the requirement change means for the architecture                               |
+| **Make recommendations**                 | Recommend how the requirements should be managed                                               |
+| **Update Requirements Impact Statement** | Generate the appropriate version of the **Requirements Impact Statement**                      |
+| **Update Repository**                    | Record changes and affected stakeholder views in the **Architecture Requirements Repository**  |
+
+```bash
+New / Changed Requirement
+          ↓
+   Assess the Impact
+          ↓
+ ┌────────┴─────────┐
+ ↓                  ↓
+Previous ADM      Current ADM
+Phases            Phase(s)
+ └────────┬─────────┘
+          ↓
+Determine when to implement
+          ↓
+Current ADM Cycle
+       OR
+Later ADM Cycle
+          ↓
+Requirements Impact Statement
+          ↓
+Update Requirements Repository
+```
+
+**Requirements Impact Statement** The Requirements Impact Statement captures the results of the impact assessment. According to the deck, its content includes:
+
+| Content                             | Purpose                                                    |
+| ----------------------------------- | ---------------------------------------------------------- |
+| **Phases to be revisited**          | Identify ADM phases that may need to be reconsidered       |
+| **Requirements prioritization**     | Identify who/what leads the prioritization and the results |
+| **Investigation results**           | Record findings from the assessment                        |
+| **Recommendations**                 | Recommend how the requirements should be managed           |
+| **Specific requirement references** | Identify the affected requirements                         |
+| **Stakeholder priority**            | Record the relevant stakeholder priority                   |
+| **Repository reference numbers**    | Maintain traceability to the Requirements Repository       |
+
+Suppose an organization is developing a new ERP architecture.
+
+*Requirement:* ERP must support 5,000 users. During the architecture development, the business changes its strategy. New requirement, ERP must support 15,000 users and operations across multiple countries. Requirements Management detects this as a changed requirement.
+
+Impact Assessment
+
+| Question                            | Assessment                              |
+| ----------------------------------- | --------------------------------------- |
+| What changed?                       | User capacity and geographic scope      |
+| Which architecture may be affected? | Business, Application, Data, Technology |
+| Which ADM phases may need review?   | Potentially B, C and D                  |
+| Current or later cycle?             | Decision based on impact and timing     |
+| What must be documented?            | Requirements Impact Statement           |
+| Where is it recorded?               | Architecture Requirements Repository    |
+
+> - **Exam Memory**
+> - Requirements Management = Continuously identify, manage, assess, trace and feed requirements throughout the ADM.
+> - Requirements Impact Assessment = Determine how changed requirements affect the existing architecture and which ADM phases/cycles need to respond.
+
 ## 14. Applying the ADM
+
+This module explains how the ADM is applied in practice rather than treating it as a rigid, linear sequence.
+
+The three topics in the course deck are:
+
+1. ADM Techniques & Iterations
+2. Information Flow
+3. Architecture Alternatives & Trade-off Method
+
+### 14.1 ADM Techniques & Iterations
+
+The TOGAF ADM is an iterative method. It is not a simple one-way waterfall process. ADM phases and their steps can be executed simultaneously, repeated, revisited, or skipped when the required information is already available or is not needed for a particular Architecture Project.
+
+Iterations are driven by the information needs of the Architecture Project.
+
+```text
+Architecture Project
+        |
+        v
+  Information Need
+        |
+        v
+ Select relevant ADM path
+        |
+        +----------------------+
+        |                      |
+        v                      v
+Concurrent phases       Return / repeat phases
+        |                      |
+        +----------+-----------+
+                   v
+            Required architecture
+```
+
+The deck identifies five iteration cycles:
+
+| Iteration Cycle                           | Purpose                                                                          | Simple Meaning                   |
+| ----------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------- |
+| **1. Iteration through the entire ADM**   | Develop a comprehensive Architecture Landscape                                   | Run separate ADM cycles/projects |
+| **2. Architecture Development Iteration** | Create architecture content and ensure the architecture is considered as a whole | Iterate within an ADM cycle      |
+| **3. Architecture Capability Iteration**  | Create and evolve the Architecture Capability                                    | Improve the EA capability        |
+| **4. Architecture Governance Iteration**  | Support governance of change activities                                          | Govern implementation/change     |
+| **5. Transition Planning Iteration**      | Create change roadmaps for a defined architecture                                | Plan movement toward the target  |
+
+#### Iteration through the Entire ADM
+
+This iteration develops a comprehensive Enterprise Architecture Landscape.
+
+- Projects can go through the entire ADM cycle.
+- Each project/cycle is bounded by a **Request for Architecture Work**.
+- Each project changes or extends the Architecture Landscape.
+- Separate projects can operate their own ADM cycles concurrently (**parallel iteration**).
+- One project can trigger another (**sequential iteration**) when further architecture work is required or when impacts are identified outside the original Request for Architecture Work.
+
+```text
+Project A ──→ Customer Platform Architecture
+     |
+     +────→ may trigger Project B
+                    |
+                    └──→ Detailed Data Architecture
+```
+
+#### Architecture Development Iteration
+
+This is iteration within an ADM cycle. Projects may:
+
+1. **Operate multiple ADM phases concurrently** to manage relationships between Business, Data, Application, and Technology architectures.
+2. **Cycle between ADM phases** to cover multiple phases and converge on a detailed Target Architecture.
+3. **Return to previous phases** to update work products, converge on an Architecture Roadmap or Implementation and Migration Plan, or respond to changed requirements.
+
+| Pattern                      | Example                                                   |
+| ---------------------------- | --------------------------------------------------------- |
+| Multiple phases concurrently | B + C + D working together                                |
+| Cycle between phases         | B → C → D → C → D                                         |
+| Return to previous phase     | H change causes earlier architecture work to be revisited |
+
+#### Architecture Capability Iteration
+
+The ADM can also be used to create and evolve the Architecture Capability. This includes work around:
+
+- Architecture approach
+- Architecture principles
+- Architecture scope
+- Architecture vision
+- Architecture governance
+- EA organizational capability
+
+#### Key Exam Point
+
+> **The ADM is iterative. Multiple phases may be open concurrently, phases may be repeated, and a project does not necessarily need to execute every ADM phase.**
+
+---
+
+### 14.2 Information Flow
+
+The deck explicitly states that the ADM is **not a linear waterfall process**.
+
+The ADM is a logical method for developing knowledge and places key activity steps together so that relationships between activities and information flows can be understood.
+
+The TOGAF crop-circle diagram is a stylized path showing essential information flow. It should **not** be interpreted as:
+
+- a strict linear process model, or
+- a representation of exact activity sequence.
+
+#### Information Flow Between ADM Phases
+
+In every ADM phase:
+
+```text
+Inputs
+  |
+  v
+ADM Phase
+  |
+  v
+Outputs
+  |
+  +──────────────→ Input to a later phase
+  |
+  +──────────────→ Updated / detailed later
+```
+
+Important principles:
+
+- Every phase consumes inputs and generates outputs.
+- The output of one phase can become the input to a later phase.
+- Outputs can be updated or made more detailed in later phases.
+- The work plan of an Enterprise Architecture team depends on the problem and development task.
+- The **Request for Architecture Work** helps define the required work.
+- Different requests can require different ADM paths and different outputs.
+
+> **Exam Memory:** ADM phase outputs are information assets that can flow forward, be refined, or be revisited. The ADM is not a rigid waterfall sequence.
+
+---
+
+### 14.3 Building Block Specification Process
+
+Building Blocks are used throughout the ADM to move from required architecture capabilities to implementable solutions.
+
+The deck describes an evolutionary and iterative process based on:
+
+- Required functions
+- Imposed constraints
+- Available products
+
+```text
+Business Goals & Objectives
+          |
+          v
+Identify required ABBs
+          |
+          v
+Architecture Definition
+          |
+          v
+Refine selected ABBs
+          |
+          v
+Solution Building Blocks
+          |
+          v
+COTS / Custom Development
+```
+
+#### ABB vs SBB
+
+| Building Block                        | Meaning                                                                                    | Main Question                    |
+| ------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------- |
+| **ABB — Architecture Building Block** | Logical architecture capability/component required to meet business and architecture needs | **What capability is required?** |
+| **SBB — Solution Building Block**     | Physical/implementation-specific component that realizes an ABB                            | **How will it be implemented?**  |
+
+The deck highlights that **ABBs are defined in Phases A, B, C, and D and shaped as SBBs in Phase E**.
+
+---
+
+### 14.4 Architecture Alternatives & Trade-off Method
+
+Sometimes multiple Target Architectures can satisfy the Architecture Vision, principles, and requirements.
+
+A single architecture may not satisfy every stakeholder concern simultaneously.
+
+Therefore, architects can:
+
+1. Identify alternative Target Architectures.
+2. Build understanding of different possibilities.
+3. Identify trade-offs between alternatives.
+4. Expose hidden agendas, principles, and requirements by presenting alternatives to stakeholders.
+5. Select an alternative or combine features from multiple alternatives to create the proposed Target Architecture.
+
+#### Why Consider Alternatives?
+
+```text
+Vision + Principles + Requirements
+                |
+                v
+      Architecture Alternatives
+          /          |          \
+         /           |           \
+        v            v            v
+    Option A      Option B      Option C
+        \            |            /
+         \           |           /
+          +------ Trade-offs ---+
+                    |
+                    v
+          Proposed Target Architecture
+```
+
+#### Architecture Trade-Off Method
+
+The technique described in the deck is:
+
+| Step  | Activity                                                                                                         |
+| ----- | ---------------------------------------------------------------------------------------------------------------- |
+| **1** | Use the vision, principles, requirements, and other information to select criteria for different alternatives    |
+| **2** | Define alternatives based on the criteria and build an understanding of each                                     |
+| **3** | Select one alternative or combine features from multiple alternatives to create the proposed Target Architecture |
+
+### Example
+
+Suppose an organization needs a new enterprise integration platform.
+
+| Criterion              | Alternative A | Alternative B | Alternative C |
+| ---------------------- | ------------- | ------------- | ------------- |
+| Cost                   | Low           | Medium        | High          |
+| Scalability            | Medium        | High          | Very High     |
+| Vendor dependency      | High          | Medium        | Low           |
+| Implementation speed   | High          | Medium        | Low           |
+| Operational complexity | Low           | Medium        | High          |
+
+There may be no universally perfect option. The architect presents the alternatives and trade-offs to stakeholders so that the preferred Target Architecture can be selected based on business priorities and concerns.
+
+> **Exam Memory:** Architecture alternatives exist because different architectures can satisfy the vision and requirements with different trade-offs. The architect helps stakeholders understand those trade-offs.
+
+---
 
 ## 15. Content & Core Concepts
 
+This module contains three topics:
+
+1. Content Framework & Enterprise Metamodel
+2. Enterprise Continuum
+3. Architecture Repository
+
+### 15.1 Content Framework & Enterprise Metamodel
+
+The **Architecture Content Framework** provides a structured way to organize and describe architecture content. It supports consistency and completeness when producing architecture work products.
+
+The Content Framework provides a structure for architecture content and acts as a companion to the ADM. It can be adapted to organizational needs.
+
+```text
+ADM
+ |
+ +-- Architecture Vision
+ +-- Business Architecture
+ +-- Information Systems Architecture
+ +-- Technology Architecture
+ +-- Opportunities & Solutions
+ +-- Migration Planning
+ +-- Implementation Governance
+ +-- Change Management
+        |
+        v
+Architecture Content
+        |
+        +-- Artifacts
+        +-- Models
+        +-- Work Products
+```
+
+#### Enterprise Metamodel
+
+The **Enterprise Metamodel** defines entities within the enterprise and the relationships between them.
+
+It provides a basis for identifying what needs to be represented in architecture models and how those elements relate to one another.
+
+*Example:*
+
+```text
+Business Capability
+       |
+       v
+Business Process
+       |
+       v
+Application
+       |
+       v
+Data
+       |
+       v
+Technology
+```
+
+#### Content Framework vs Enterprise Metamodel
+
+|               | Content Framework                                     | Enterprise Metamodel                                                       |
+| ------------- | ----------------------------------------------------- | -------------------------------------------------------------------------- |
+| Main question | What architecture content should we organize/produce? | What entities and relationships should we model?                           |
+| Focus         | Architecture content and work products                | Enterprise entities and relationships                                      |
+| Purpose       | Consistency and completeness of architecture content  | Consistency and completeness of architecture models                        |
+| Example       | Catalogs, matrices, diagrams, deliverables            | Business capability, application, data, technology and their relationships |
+
+> **Exam Memory:** Content Framework = structure the architecture content. Enterprise Metamodel = define the entities and relationships represented by the architecture.
+
+---
+
+### 15.2 Enterprise Continuum
+
+The **Enterprise Continuum** is a classification mechanism for architecture and solution assets, with increasing detail and specialization.
+
+It provides context for reuse and helps distinguish generic assets from increasingly organization-specific assets.
+
+```text
+Generic
+  |
+  v
+Foundation
+  |
+  v
+Common / Industry
+  |
+  v
+Organization-Specific
+```
+
+The Enterprise Continuum consists of two complementary continuums:
+
+- **Architecture Continuum** — classification of architecture assets.
+- **Solution Continuum** — classification of solution assets.
+
+|           | Architecture Continuum                | Solution Continuum                |
+| --------- | ------------------------------------- | --------------------------------- |
+| Focus     | Architecture components and artifacts | Solution components and artifacts |
+| Purpose   | Classify architecture assets          | Classify solution assets          |
+| Direction | Generic → specialized                 | Generic → specialized             |
+
+The deck defines the **Solution Continuum** as a categorization mechanism with increasing detail and specialization for components and artifacts stored in the Solutions Landscape or Reference Library.
+
+> **Exam Memory:** Enterprise Continuum = classification and organization of reusable architecture and solution assets.
+
+---
+
+### 15.3 Architecture Repository
+
+The **Architecture Repository** provides a structured location for architecture assets and related information.
+
+It can be implemented using architecture modeling tools, analytical tools, file/document repositories, or combinations of these.
+
+A practical repository can contain:
+
+| Repository Area                            | Purpose                                                                 |
+| ------------------------------------------ | ----------------------------------------------------------------------- |
+| **Architecture Metamodel / Framework**     | Organization-specific architecture structure                            |
+| **Reference Library**                      | Reference models, guidelines, templates, patterns and reusable material |
+| **Standards Library**                      | Standards and technical requirements                                    |
+| **Architecture Landscape**                 | Baseline, Target, Transition and other architecture states              |
+| **Solutions Landscape**                    | Solution building blocks and implementation solutions                   |
+| **Architecture Requirements Repository**   | Authorized architecture requirements                                    |
+| **Governance Repository / Governance Log** | Governance structures, parameters and governance records                |
+
+```text
+                 Architecture Repository
+                         |
+        +----------------+----------------+
+        |                |                |
+        v                v                v
+ Reference Library   Standards Library  Governance
+        |                |                |
+        +----------------+----------------+
+                         |
+                         v
+               Architecture Landscape
+                         |
+                         v
+                 Solutions Landscape
+                         |
+                         v
+            Requirements / Governance Data
+```
+
+> **Exam Memory:** Architecture Repository = structured storage and reuse of architecture assets, standards, requirements, solutions and governance information.
+
+---
+
 ## 16. Architecture Governance & EA Capability
+
+This module contains:
+
+1. Corporate & EA Governance
+2. Architecture Board & Capability
+
+### 16.1 Corporate Governance
+
+Governance is a system by which the current and future state are directed and controlled.
+
+Corporate Governance concerns how an enterprise is directed and controlled and includes areas such as:
+
+- Strategic direction
+- Stakeholder rights and roles
+- Performance objectives
+- Accountability
+- Transparency
+- Responsible use of resources
+
+### 16.2 Architecture Governance
+
+**Architecture Governance** is a system by which Enterprise Architectures are directed and controlled.
+
+It operates within a hierarchy of governance structures and may coexist with:
+
+```text
+Corporate Governance
+        |
+        v
+Enterprise / EA Governance
+        |
+        v
+IT Governance
+        |
+        v
+Technology / Solution Governance
+        |
+        v
+Project / Implementation Governance
+```
+
+Architecture Governance provides the discipline needed to ensure that architecture decisions, implementation activities, and changes remain aligned with approved architecture and organizational objectives.
+
+### Governance Benefits
+
+The deck highlights benefits including:
+
+- Discipline
+- Transparency
+- Independency
+- Accountability
+- Responsibility
+- Fairness
+
+These principles support controlled and credible architecture decision-making.
+
+---
+
+### 16.3 Architecture Board
+
+The **Architecture Board** is a cross-organizational body represented by key architecture stakeholders.
+
+It is responsible for reviewing and maintaining architecture and overseeing implementation of the architecture strategy.
+
+Typical responsibilities include:
+
+- Improving architecture discipline and maturity.
+- Ensuring consistency across sub-architectures.
+- Enforcing Architecture Compliance.
+- Establishing reuse targets.
+- Ensuring EA remains flexible to business and technology needs.
+- Providing escalation capability for out-of-bounds decisions.
+- Monitoring Architecture Contracts.
+- Resolving architecture ambiguity, issues, and conflicts.
+- Providing advice and guidance.
+- Granting dispensations where appropriate.
+- Considering policy changes.
+
+An important governance distinction is that decision rights concerning the Target Architecture remain with the appropriate stakeholders; the Architecture Board provides governance, review, recommendations, and escalation mechanisms.
+
+> **Exam Memory:** Architecture Board = cross-organizational governance body for architecture oversight and compliance.
+
+---
+
+### 16.4 Architecture Capability
+
+An **Architecture Capability** is an organizational capability that enables an enterprise to develop, use, and sustain architecture in order to govern change.
+
+It includes:
+
+- Organization
+- Roles
+- Responsibilities
+- Skills
+- Processes
+- Governance
+- Architecture content
+- Architecture repository
+- Supporting tools and practices
+
+The TOGAF ADM can itself be used iteratively to develop and evolve the Architecture Capability.
+
+```text
+Architecture Capability
+        |
+        +-- Organization
+        +-- People / Skills
+        +-- Processes
+        +-- Content Framework
+        +-- Architecture Repository
+        +-- Governance
+        +-- Tools
+        +-- Roadmap
+```
+
+### Architecture Capability Development
+
+The deck shows that the capability can be developed through areas such as:
+
+- Organization Model
+- Process Model
+- Architecture Content / Metamodel
+- Architecture Repository
+- EA Capability Roadmap
+
+The roadmap can then transition into an Implementation and Migration Plan and be executed to build the desired EA Capability.
+
+### Architecture Capability Benefits
+
+The deck identifies benefits such as:
+
+- Increased transparency of accountability and informed delegation of authority.
+- Proactive risk and opportunity management.
+- Protection of existing assets through reuse.
+- Reuse of processes, concepts, and components across organizational units.
+- Increased visibility supporting internal and external requirements.
+- Internal value and shareholder value creation.
+
+> **Exam Memory:** Architecture Governance = direct and control architecture. Architecture Board = governance body. Architecture Capability = organizational capability that enables EA and governance.
+
+---
 
 ## 17. Exam Preparation & Definitions
 
+This module contains:
+
+1. Key Definitions
+2. Exam Preparation & Time Management
+3. Question Analysis & Answer Selection
+
+### 17.1 Key Definitions
+
+| Term                                  | Exam-Oriented Definition                                                                                                                                                          |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Architecture**                      | The fundamental concepts or properties of a system in its environment, embodied in its elements, relationships, and principles of design and evolution.                           |
+| **Architecture Domain**               | A representation of a specific area of architecture, such as Business, Data, Application, or Technology.                                                                          |
+| **Architecture Framework**            | A conceptual structure used to develop, use, and sustain an architecture.                                                                                                         |
+| **Architecture Governance**           | A system by which Enterprise Architectures are directed and controlled.                                                                                                           |
+| **ADM**                               | The TOGAF Architecture Development Method used to develop and use Enterprise Architecture.                                                                                        |
+| **Architecture Building Block (ABB)** | A logical architecture component that describes what capability is required.                                                                                                      |
+| **Solution Building Block (SBB)**     | An implementation-specific component that realizes one or more ABBs.                                                                                                              |
+| **Architecture View**                 | A representation of a system from the perspective of related concerns.                                                                                                            |
+| **Architecture Viewpoint**            | A specification of the conventions for constructing and using an architecture view.                                                                                               |
+| **Stakeholder**                       | An individual, team, organization, or class thereof having an interest in a system.                                                                                               |
+| **Requirement**                       | A statement of need that must be met by an architecture or solution.                                                                                                              |
+| **Solution Continuum**                | A categorization mechanism for solution components and artifacts with increasing detail and specialization.                                                                       |
+| **Standards Library**                 | A library of standards used to define services and components of an Organization-Specific Architecture.                                                                           |
+| **Strategic Architecture**            | A summary formal description of the enterprise providing an organizing framework for operational and change activity and an executive-level long-term view for direction setting. |
+| **Technology Architecture**           | A description of the structure and interaction of technology services and technology components.                                                                                  |
+| **Transition Architecture**           | A formal description of one state of the architecture at an architecturally significant point in time.                                                                            |
+| **Target Architecture**               | The description of a future state of the architecture being developed for an organization.                                                                                        |
+| **Value Stream**                      | An end-to-end collection of activities that create an overall result for a customer, stakeholder, or end user.                                                                    |
+| **Viewpoint Library**                 | A collection of specifications of architecture viewpoints contained in the Reference Library portion of the Architecture Repository.                                              |
+| **Work Package**                      | A set of actions identified to achieve one or more objectives for the business.                                                                                                   |
+
+These definitions are drawn from the definition material in the course deck. fileciteturn32file6
+
+---
+
+### 17.2 TOGAF Foundation Exam Preparation
+
+The deck identifies the TOGAF Enterprise Architecture Part 1 Foundation exam as **OGEA-101** and describes the exam as:
+
+| Item                                                   | Format                 |
+| ------------------------------------------------------ | ---------------------- |
+| Questions                                              | **40**                 |
+| Question type                                          | **Single choice**      |
+| Time                                                   | **60 minutes**         |
+| Additional time stated in deck for non-native speakers | **30 minutes**         |
+| Book                                                   | **Closed book**        |
+| Pass mark                                              | **60% — 24 out of 40** |
+
+The deck recommends three preparation activities:
+
+1. **Study the content** — especially the ADM, its phases, techniques, and deliverables.
+2. **Complete exam questions** — become familiar with the structure and characteristics of the exam.
+3. **Test under real conditions** — simulate 40 questions in 60 minutes.
+
+It also recommends testing the exam infrastructure and ensuring a quiet environment and redundant internet connection for a proctored exam.
+
+---
+
+### 17.3 Time Management
+
+The deck recommends maintaining a constant pace.
+
+For a 60-minute / 40-question exam:
+
+```text
+60 minutes / 40 questions
+        |
+        v
+~90 seconds per question
+```
+
+Recommended approach:
+
+- Move quickly through questions you understand.
+- Skip difficult questions temporarily rather than getting stuck.
+- Return to uncertain questions later.
+- Use remaining time for a quality check.
+- Review the questions where you have the most doubt.
+
+> **Important:** The deck states that wrong answers do not receive negative points, so answer every question.
+
+---
+
+### 17.4 Question Analysis
+
+Read every question and every answer option carefully.
+
+Look for key TOGAF terms such as:
+
+- Stakeholder
+- Concern
+- Viewpoint
+- Governance
+- Architecture Vision
+- Requirements
+- Building Block
+- Roadmap
+- Compliance
+- Migration
+- Architecture Capability
+
+A useful process is:
+
+```text
+Read the Question
+       |
+       v
+Identify Key Terms
+       |
+       v
+Identify ADM Phase / Concept
+       |
+       v
+Eliminate Distractors
+       |
+       v
+Compare Similar Answers
+       |
+       v
+Select the TOGAF-Aligned Answer
+```
+
+#### ADM Phase Recognition
+
+| Question Clue               | Likely Focus            |
+| --------------------------- | ----------------------- |
+| Architecture Capability     | Preliminary Phase       |
+| Vision / business value     | Phase A                 |
+| Business Architecture       | Phase B                 |
+| Data / Application          | Phase C                 |
+| Technology Architecture     | Phase D                 |
+| Opportunities / Solutions   | Phase E                 |
+| Migration Planning          | Phase F                 |
+| Implementation / Compliance | Phase G                 |
+| Architecture Change         | Phase H                 |
+| Continuous requirements     | Requirements Management |
+
+---
+
+### 17.5 Answer Selection
+
+The deck recommends:
+
+1. **Stick to the TOGAF spirit** — choose the answer most closely matching TOGAF concepts, phases, deliverables, and techniques.
+2. **Sort out the distractor** — eliminate options that are clearly unrelated to TOGAF.
+3. **Look for similar answers** — when two options appear plausible, carefully compare their wording and alignment with TOGAF.
+4. **Always answer** — there is no benefit to leaving a question unanswered.
+
+> **Exam Strategy:** Do not answer according to what would merely be a good IT practice. Answer according to the TOGAF concept described in the question.
+
+---
+
 ## 18. Practice Test
 
+The course deck includes a **TOGAF Enterprise Architecture Part 1 Sample Exam** with **40 questions, answers, and explanations**.
+
+The practice test should be used as a realistic exam simulation rather than simply as a reading exercise.
+
+### Practice-Test Rules
+
+```text
+40 Questions
+     |
+     v
+60 Minutes
+     |
+     v
+Single Choice
+     |
+     v
+Closed Book
+     |
+     v
+Target: 24/40 or higher
+```
+
+### Recommended Practice Process
+
+**Round 1 — Full Simulation**
+
+- Answer all 40 questions.
+- Use a 60-minute timer.
+- Do not consult notes.
+- Mark uncertain questions.
+
+**Round 2 — Review**
+
+For every incorrect answer:
+
+1. Identify the TOGAF concept.
+2. Identify the relevant ADM phase.
+3. Determine why the selected answer was wrong.
+4. Determine why the correct answer is better.
+5. Record the knowledge gap.
+
+**Round 3 — Weak-Area Revision**
+
+Group mistakes into categories:
+
+| Category        | Examples                                         |
+| --------------- | ------------------------------------------------ |
+| EA Fundamentals | Architecture, domains, stakeholders, concerns    |
+| ADM             | Phases, iteration, information flow              |
+| Content         | Artifacts, deliverables, building blocks         |
+| Architecture    | Business, Data, Application, Technology          |
+| Migration       | Roadmap, work packages, Transition Architectures |
+| Requirements    | Requirements Management, Impact Assessment       |
+| Governance      | Architecture Board, Contracts, Compliance        |
+| Repository      | Enterprise Continuum, Architecture Repository    |
+| Definitions     | Foundation terminology                           |
+
+### Practice-Test Performance Record
+
+| Attempt | Correct | Wrong | Score | Target Met? | Weak Areas |
+| ------: | ------: | ----: | ----: | :---------: | ---------- |
+|       1 |         |       |       |             |            |
+|       2 |         |       |       |             |            |
+|       3 |         |       |       |             |            |
+|       4 |         |       |       |             |            |
+|       5 |         |       |       |             |            |
+
+### Target
+
+> **Minimum passing benchmark from the course deck: 24/40 (60%).**
+
+For preparation, a stronger target is to achieve a stable score above the passing threshold across several timed practice attempts before sitting the actual exam.
+
+> The deck establishes that the practice test contains 40 questions, answers, and explanations. The individual question text is intentionally not reproduced here unless it is directly extracted from the supplied deck; this README therefore does not invent questions and incorrectly attribute them to the course material.
+
+---
+
 ## 19. Wrap-up
+
+Congratulations — you have completed the **TOGAF Enterprise Architecture Foundation** study roadmap.
+
+The course has taken you from Enterprise Architecture fundamentals through the ADM, architecture domains, migration, governance, content management, requirements, exam preparation, and practice testing.
+
+### Complete Learning Journey
+
+```text
+01  Introduction to Enterprise Architecture
+        |
+02  Architecture Domains
+        |
+03  Architecture Development Method (ADM)
+        |
+04  Preliminary Phase
+        |
+05  Phase A — Architecture Vision
+        |
+06  Phase B — Business Architecture
+        |
+07  Phase C — Information Systems Architecture
+        |
+08  Phase D — Technology Architecture
+        |
+09  Phase E — Opportunities & Solutions
+        |
+10  Phase F — Migration Planning
+        |
+11  Phase G — Implementation Governance
+        |
+12  Phase H — Architecture Change Management
+        |
+13  Requirements Management
+        |
+14  Applying the ADM
+        |
+15  Content & Core Concepts
+        |
+16  Architecture Governance & EA Capability
+        |
+17  Exam Preparation & Definitions
+        |
+18  Practice Test
+        |
+19  Wrap-up
+```
+
+### Final TOGAF Mental Model
+
+```text
+                         ENTERPRISE ARCHITECTURE
+                                  |
+                                  v
+                         Architecture Capability
+                                  |
+                                  v
+                            PRELIMINARY
+                                  |
+                                  v
+                         A — Architecture Vision
+                                  |
+                    +-------------+-------------+
+                    |             |             |
+                    v             v             v
+                    B             C             D
+                 Business     Data/App      Technology
+                    +-------------+-------------+
+                                  |
+                                  v
+                       E — Opportunities & Solutions
+                                  |
+                                  v
+                       F — Migration Planning
+                                  |
+                                  v
+                       G — Implementation Governance
+                                  |
+                                  v
+                       H — Architecture Change Management
+                                  |
+                                  +------> New ADM Cycle
+
+                 Requirements Management
+                         <--- Continuous --->
+
+                 Governance
+                     |
+                     v
+               Architecture Board
+
+                 Architecture Content
+                     |
+                     v
+          Content Framework + Metamodel
+                     |
+                     v
+              Enterprise Continuum
+                     |
+                     v
+              Architecture Repository
+```
+
+### Five Core Memory Rules
+
+| Concept                     | Remember                                                                                                |
+| --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Architecture Domains**    | **WHAT** — Business, Data, Application, Technology                                                      |
+| **ADM**                     | **HOW** — develop and manage architecture                                                               |
+| **Requirements Management** | **CONTINUOUS** — requirements flow throughout the ADM                                                   |
+| **Architecture Governance** | **CONTROL** — direct and control architecture                                                           |
+| **Architecture Repository** | **STORE & REUSE** — architecture assets, requirements, standards, solutions, and governance information |
+
+### ADM One-Line Memory
+
+```text
+Prepare
+  ↓
+Vision
+  ↓
+Business → Information Systems → Technology
+  ↓
+Opportunities & Solutions
+  ↓
+Migration Planning
+  ↓
+Implementation Governance
+  ↓
+Change Management
+  ↺
+```
+
+### Final Exam Checklist
+
+Before taking the Foundation exam, make sure you can explain without notes:
+
+- [ ] Enterprise Architecture definition, purpose, and benefits
+- [ ] Four Architecture Domains
+- [ ] Baseline, Target, Transition, Candidate, and Resting Architecture States
+- [ ] ADM phases and their purposes
+- [ ] Preliminary Phase and Architecture Capability
+- [ ] Architecture Principles
+- [ ] Phase A and Architecture Vision
+- [ ] Phase B Business Architecture
+- [ ] Phase C Data and Application Architecture
+- [ ] Phase D Technology Architecture
+- [ ] Phase E Opportunities and Solutions
+- [ ] Phase F Migration Planning
+- [ ] Phase G Implementation Governance
+- [ ] Phase H Architecture Change Management
+- [ ] Requirements Management and Requirements Impact Assessment
+- [ ] ADM iteration and information flow
+- [ ] Architecture Building Blocks vs Solution Building Blocks
+- [ ] Architecture alternatives and trade-offs
+- [ ] Content Framework and Enterprise Metamodel
+- [ ] Enterprise Continuum
+- [ ] Architecture Repository
+- [ ] Corporate and Architecture Governance
+- [ ] Architecture Board
+- [ ] Architecture Capability
+- [ ] Key TOGAF definitions
+- [ ] Exam time management
+- [ ] Question analysis and answer selection
+- [ ] 40-question timed practice test
+
+### Final Preparation Rule
+
+> **Know the TOGAF terminology, understand the ADM logic, recognize the phase from the question, eliminate distractors, and select the answer that most closely matches the TOGAF Standard.**
+
+### Course Completion
+
+The course deck closes with congratulations and good wishes for the **TOGAF Enterprise Architecture Part 1 Exam (Foundation)**.
+
+> **Good luck with your TOGAF Enterprise Architecture Part 1 Foundation exam.**
+
+---
+
+## Recommended Next Step
+
+After completing this roadmap, use the supplied 40-question practice test as a timed mock exam. Record your score and every incorrect answer. Then revise the corresponding module before attempting the next mock exam.
+
+```text
+Study
+  ↓
+Practice Test
+  ↓
+Analyze Mistakes
+  ↓
+Identify Weak Areas
+  ↓
+Revise
+  ↓
+Retest
+  ↓
+Repeat Until Consistent
+```
