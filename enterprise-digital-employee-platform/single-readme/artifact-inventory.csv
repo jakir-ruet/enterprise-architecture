@@ -1,0 +1,53 @@
+ID,Artifact,Domain,TOGAF Relationship,Location
+P-01,Project Charter,Cross-domain,Preliminary,01-project/01-project-charter.md
+P-02,Architecture Scope,Cross-domain,Preliminary,01-project/02-architecture-scope.md
+P-03,Stakeholders and Concerns,Cross-domain,ADM / Stakeholder Management,01-project/03-stakeholders.md
+P-04,Architecture Principles,Cross-domain,Preliminary,01-project/04-architecture-principles.md
+P-05,Architecture Requirements,Cross-domain,Requirements Management,01-project/05-requirements.md
+P-06,Requirements Impact Assessment,Cross-domain,Requirements Management,01-project/06-requirements-impact-assessment.md
+A-01,Architecture Vision,Cross-domain,Phase A,09-architecture-vision/01-architecture-vision.md
+A-02,Architecture Definition Document,Cross-domain,Phase A,09-architecture-vision/02-architecture-definition-document.md
+B-01,Business Capability Map,Business,Phase B,02-business-architecture/01-business-capability-map.md
+B-02,Business Processes,Business,Phase B,02-business-architecture/02-business-processes.md
+B-03,Value Streams,Business,Phase B,02-business-architecture/03-value-streams.md
+B-04,Organization Model,Business,Phase B,02-business-architecture/04-organization-model.md
+B-05,Baseline / Target / Gap Analysis,Business,Phase B,02-business-architecture/05-baseline-target-gap.md
+C-DATA-01,Information Concepts,Data,Phase C,03-data-architecture/01-information-concepts.md
+C-DATA-02,Data Entities,Data,Phase C,03-data-architecture/02-data-entities.md
+C-DATA-03,Data Model,Data,Phase C,03-data-architecture/03-data-model.md
+C-DATA-04,Data Governance,Data,Phase C,03-data-architecture/04-data-governance.md
+C-DATA-05,Baseline / Target / Gap Analysis,Data,Phase C,03-data-architecture/05-baseline-target-gap.md
+C-DATA-06,Data Security Architecture,Data,Phase C,03-data-architecture/06-data-security.md
+C-APP-01,Application Portfolio,Application,Phase C,04-application-architecture/01-application-portfolio.md
+C-APP-02,Application Services,Application,Phase C,04-application-architecture/02-application-services.md
+C-APP-03,API Catalog,Application,Phase C,04-application-architecture/03-api-catalog.md
+C-APP-04,Integration Architecture,Application,Phase C,04-application-architecture/04-integration-architecture.md
+C-APP-05,Application Matrices,Application,Phase C,04-application-architecture/05-application-matrices.md
+C-APP-06,Baseline / Target / Gap Analysis,Application,Phase C,04-application-architecture/06-baseline-target-gap.md
+C-APP-07,Application Communication Diagram,Application,Phase C,04-application-architecture/07-application-communication.md
+D-01,Infrastructure Architecture,Technology,Phase D,05-technology-architecture/01-infrastructure.md
+D-02,Cloud Architecture,Technology,Phase D,05-technology-architecture/02-cloud.md
+D-03,Kubernetes Architecture,Technology,Phase D,05-technology-architecture/03-kubernetes.md
+D-04,Runtime Architecture,Technology,Phase D,05-technology-architecture/04-runtime.md
+D-05,Network Architecture,Technology,Phase D,05-technology-architecture/05-network.md
+D-06,Security and Observability,Technology,Phase D,05-technology-architecture/06-security-observability.md
+D-07,Baseline / Target / Gap Analysis,Technology,Phase D,05-technology-architecture/07-baseline-target-gap.md
+D-08,Technology Portfolio Catalog,Technology,Phase D,05-technology-architecture/08-technology-portfolio.md
+E-01,Consolidated Gap Register,Cross-domain,Phase E,06-migration-roadmap/01-gap-register.md
+E-02,Work Packages,Cross-domain,Phase E,06-migration-roadmap/02-work-packages.md
+E-03,Transition Architectures,Cross-domain,Phase E,06-migration-roadmap/03-transition-architectures.md
+E-04,Architecture Roadmap,Cross-domain,Phase E,06-migration-roadmap/04-architecture-roadmap.md
+F-01,Implementation and Migration Plan,Cross-domain,Phase F,06-migration-roadmap/05-implementation-migration-plan.md
+F-02,Implementation Governance Model,Cross-domain,Phase F,06-migration-roadmap/06-implementation-governance-model.md
+G-01,Architecture Governance Model,Governance,Phase G,07-architecture-governance/01-governance-model.md
+G-02,Architecture Contract,Governance,Phase G,07-architecture-governance/02-architecture-contract.md
+G-03,Architecture Compliance Assessment,Governance,Phase G,07-architecture-governance/03-compliance-assessment.md
+H-01,Architecture Change Management,Governance,Phase H,07-architecture-governance/04-change-management.md
+R-01,Architecture Repository Structure,Repository,Content / Architecture Repository,08-architecture-repository/01-repository-structure.md
+R-02,Content and Artifact Index,Repository,Content / Architecture Repository,08-architecture-repository/02-content-and-artifact-index.md
+R-03,Architecture Decision Records,Repository,Governance / Architecture Repository,08-architecture-repository/03-architecture-decisions.md
+R-04,Standards Library,Repository,Architecture Repository,08-architecture-repository/04-standards-library.md
+R-05,Requirement Traceability Matrix,Cross-domain,Requirements / Architecture Repository,08-architecture-repository/05-requirement-traceability.md
+FNL-01,Executive Architecture Summary,Cross-domain,Final Architecture,10-final/01-executive-architecture-summary.md
+FNL-02,Final Architecture Review,Cross-domain,Final Architecture,10-final/02-final-architecture-review.md
+FNL-03,Project Portfolio Checklist,Cross-domain,Final Architecture,10-final/03-project-portfolio-checklist.md
